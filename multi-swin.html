@@ -201,11 +201,11 @@
               <div class="row">
                 <h3 class="center">Network Architecture</h3>
                 <div class="col l12 m12 s12">
-                  <img src="images/tvqe.jpg" class="responsive-img">
+                  <img src="images/multi-swin_net.jpg" class="responsive-img">
                 </div>
 
                 <div class="col l12 m12 s12">
-                  <p style="text-align: justify"><i class="material-icons tiny cyan-text">grade</i> The framework of our proposed TVQE method, which consists of the Transformer based Spatio-Temporal feature Fusion (TSTF) Module and the Multi-scale Channel-wise Attention based Quality Enhancement (MCQE) Module. The TSTF module is designed to exploit spatio-temporal correlation between multiple frames. After TSTF, the multi-scale information between channels in the feature map is further fused by the MCQE module, and finally generate the enhanced frame. 
+                  <p style="text-align: justify"><i class="material-icons tiny cyan-text">grade</i> The target frame along with its six adjacent frames are sequentially input to enable the LA module and the GRF module to learn the spatio-temporal feature residuals. Subsequently, the QE module learns the residuals specific to the target frame, which are then added back to enhance the quality of the target frame. The GRF module comprises N AMST blocks. The AMST block undergoes convolution, and includes four transformers with varying window shifts to calculate the adaptive residuals. The QE module contains M MSFS blocks. The MSFS block handles three types of features at different expansion rates, employing pooling and convolution to selectively enhance useful channels within each feature. 
                   </p>
                 </div>
               </div>
@@ -213,8 +213,8 @@
              <div class="row">
                 <h3 class="center">Results</h3>
                 <div class="col l12 m12 s12">
-                  <img src="images/tvqe1.png" class="responsive-img">
-				          <img src="images/tvqe2.png" class="responsive-img">
+                  <img src="images/multi-swin_result1.png" class="responsive-img">
+				          <img src="images/multi-swin_result2.png" class="responsive-img">
                 </div>
 			
 			
@@ -230,14 +230,16 @@
 				  <h3 class="center">Citation</h3>
                 <div class="col l12 m12 s12">
                   <p>
-                    @article{yu2022end,<br>
-					  &nbsp;title={End-to-end Transformer for Compressed Video Quality Enhancement},<br>
-					  &nbsp;author={Yu, Li and Chang, Wenshuai and Wu, Shiyu and Gabbouj, Moncef},<br>
-					  &nbsp;journal={arXiv preprint arXiv:2210.13827},<br>
-					  <!-- &nbsp;pages={1--5},<br> -->
-					  &nbsp;year={2022}<br>
-					  &nbsp;organization={IEEE}<br>
-					}
+                    @ARTICLE{10599772,
+			author={Yu, Li and Wu, Shiyu and Gabbouj, Moncef},
+			journal={IEEE Signal Processing Letters}, 
+			title={Multi-Swin Transformer Based Spatio-Temporal Information Exploration for Compressed Video Quality Enhancement}, 
+			year={2024},
+			volume={31},
+			number={},
+			pages={1880-1884},
+			keywords={Transformers;Convolution;Video recording;Quality assessment;Motion compensation;Feature extraction;Correlation;Compressed video quality enhancement;spatio-temporal information;swin transformer},
+			doi={10.1109/LSP.2024.3429008}}
                  </p>
                 </div>
               </div>
