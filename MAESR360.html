@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <link rel="icon" type="image/x-icon" href="images/YH.png" />
+  <title>selfvqa</title>
+  <!--Import Google Icon Font-->
+
+  <!--<link href="http://fonts.useso.com/icon?family=Material+Icons" rel="stylesheet">-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="css/main.css">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <style>
+    body
+    {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    .vertical-nav
+    {
+      margin: 0;
+      position: fixed;
+      width: 300px;
+      /*background-color: #343131;*/
+      min-height: 100%;
+      background-image: url("images/vertical_Nov19.jpg");
+      background-repeat: round;
+    }
+
+    .profile-block
+    {
+      position: relative;
+      height: 300px;
+      /*background-color: #324D5C;*/
+
+    }
+    .profile-block-sm
+    {
+      position: relative;
+      height: 200px;
+      /*background-color: #324D5C;*/
+
+    }
+
+    .profile
+    {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 50%;
+      margin-left: 30px;
+
+      border: solid 5px #F4D03F;
+    }
+
+    .profile-sm
+    {
+      /*position: absolute;*/
+      /*top: 50%;*/
+      /*left: 50%;*/
+      /*transform: translateX(50%);*/
+      border-radius: 50%;
+      margin: auto;
+
+      border: solid 5px #F4D03F;
+    }
+
+    .logo-link
+    {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .card-content
+    {
+      padding: 0 !important;
+    }
+
+    .card-title
+    {
+      background-color: #FBD8B0;
+      padding: 12px;
+    }
+
+    p
+    {
+      line-height: 150%;
+    }
+    li
+    {
+      padding-bottom: 10px;
+    }
+    strong
+    {
+      font-weight: bolder;
+    }
+    .project-item
+    {
+    }
+    .project-logo
+    {
+    }
+    .authors{
+      text-align: center;
+      width: 100%;
+      margin: auto;
+      font-size: 12pt;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    .author{
+      font-weight: bold;
+      display: inline;
+      padding: 0 1em;
+    }
+    h3{
+      font-size: xx-large;
+      display: block;
+      /*font-size: 1.5em;*/
+      margin-block-start: 0.83em;
+      margin-block-end: 0.83em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      font-weight: bold;
+    }
+    .bibtex {
+      padding-left: 20px;
+      font-family: Courier New, Courier, 'gandhi_sansregular', monospace;
+      white-space: pre;
+    }
+    ul.marked {list-style-type: circle !important;}
+    ul li::marker {
+      color: darkslategrey;
+      font-size: 1.5em;
+    }
+    i {
+	font-style: normal;
+    }
+  </style>
+</head>
+<body>
+
+<div class="">
+  <div style="">
+    <div class="container">
+      <div class="">
+        <div class="row">
+          <div class="col s12 m12 l10 offset-l1">
+            <div class="title">
+              <h2 class="center" style="margin-top: 120px; font-size: 32pt">
+                MAESR360: Masked autoencoder-based 360-degree video streaming via multi-scale feature fusion
+              </h2>
+              <!-- <p class="center" style="font-size: large"><a href="https://arxiv.org/abs/2002.03711">[ arxiv.org/abs/2002.03711 ]</a> -->
+                <p class="center" style="font-size: large"><i>VCIP 2024: Visual Communication and Image Processing Conference</i>
+                <p class="center" style="font-size: large"><a href="">[ Paper ]</a>&nbsp<a href="https://github.com/Vencoders/MAESR360">[ Code ]</a>&nbsp<a href="https://www.alipan.com/s/haKj2hy9tY2">[ PDF ]</a>&nbsp<a href="https://www.alipan.com/s/k37JQWxqYUk">[ PPT ]</a>
+			
+            </div>
+           <div class="authors">
+<!-- 			  <div class="author"><a href="https://huzi96.github.io/">Yueyu Hu</a></div><br class="hide-on-med-and-up"> -->
+              <div class="author">Li Yu {li.yu@nuist.edu.cn} </a></div><br class="hide-on-med-and-up">
+              <div class="author">Zhiyu Pang {202212490756@nuist.edu.cn} </a></div><br class="hide-on-med-and-up">
+              <div class="author">Moncef Gabbouj {moncef.gabbouj@tuni.fi} </a></div><br class="hide-on-med-and-up">
+
+            </div>
+			<div class="abstract">
+			  <h3 class="center">Abstract</h3>
+			  <ul style="font-size: 13pt; text-align: justify">
+			    <li>
+			      <div>
+			        <i class="material-icons tiny cyan-text">grade</i>
+				      360-degree video streaming is becoming increasingly popular for its immersive experience. Traditional adaptive tile-based  streaming methods allocate the bitrates according to viewport prediction, which effectively reduces required transmission bandwidth, but it will cause serious quality degradation when the viewport prediction is inaccurate. Thus, some researchers propose visual reconstruction and enhancement-based 360-degree video streaming framework, which can reconstructs the whole frame at very low bitrates. However, existing frameworks are built upon image-based visual reconstruction methods, which do not fully consider the characteristics of videos. In this paper, we propose a masked autoencoder-based, multi-scale optimized framework for 360-degree video streaming (MAESR360), which fully considers the temporal relevance of the video. We utilize spatio-temporal downsampling and high-ratio tube masking strategies to effectively reduce the amount of transmitted data. Additionally, we design a lightweight visual reconstruction model based on multi-scale feature fusion to recover the visual quality of video frames. The effectiveness of our proposed method is demonstrated through extensive experiments.
+			      </div>
+			        </li>
+			  </ul>
+			</div>
+            <div class="abstract">
+              <h3 class="center">Highlights</h3>
+              <ul style="font-size: 13pt; text-align: justify">
+                <li>
+                  <div>
+                    <i class="material-icons tiny cyan-text">grade</i>
+                    We propose a novel video-centric masked autoencoder-based framework for 360-degree video streaming. It utilizes spatio-temporal downsampling and tube masking, substantially reducing the data volume of 360-degree video streams during transmission.
+
+                  </div>
+                    </li>
+                <li>
+                  <div>
+                    <i class="material-icons tiny  cyan-text">grade</i>
+                   A lightweight multi-scale visual reconstruction model is proposed, consisting of a MaskedDecoder and an SR model. The visual reconstruction model effectively enhances the visual quality of the reconstructed video frames by leveraging the multi-scale features.
+
+                  </div>
+                    </li>
+                <li>
+                  <div>
+                    <i class="material-icons tiny  cyan-text">grade</i>
+                    Extensive experiments on real datasets show that the MAESR360 can reduce data redundancy by 95.21\%. It achieves 1.57-6.04dB improvement on PSNR and 0.016-0.092 improvement on SSIM over baseline methods.
+                  </div>
+                     </li>
+              </ul>
+            </div>
+            <div class="experiment">
+
+              <div class="row">
+                <h3 class="center">Network Architecture</h3>
+                <div class="col l12 m12 s12">
+                  <img src="images/MAESR360_framework.png" class="responsive-img">
+                </div>
+
+                <div class="col l12 m12 s12">
+                  <p style="text-align: justify"><i class="material-icons tiny cyan-text">grade</i> The framework of the proposed MAESR360 method. On the server side, the video frames are sub-sampled into LR frames by the spatio-temporal downsampling model, and the multi-scale features are extracted and sent to the client for visual reconstruction. Then, the MaskedEncoder, which consists of a few residual blocks and convolutional layers, performs pipelined masking on the LR frames and retains a small number of patches to be sent to the client. The visual reconstruction model is trained and then sent to the client for deployment before video transmission, utilizing multi-scale features to assist visual reconstruction and super-resolution of video frames.
+                  </p>
+                </div>
+              </div>
+			  
+             <div class="row">
+                <h3 class="center">Results</h3>
+<!--                 <div class="col l12 m12 s12"> -->
+		<div class="col l10 offset-l1 m8 offset-m2 s10 offset-s1 center-align">
+                  <img src="images/MAESR360_Comparison with Baselines.png" class="responsive-img">
+		  <img src="images/MAESR360_Transfer Learning Capabilities.png" class="responsive-img">
+		  <img src="images/MAESR360_Ablation Study.png" class="responsive-img">
+                </div>
+		  
+              <div class="row">
+                <div class="col l12 m12 s12">
+                  <p><strong>Please check our paper for detail results.</strong></p>
+                </div>
+              </div>
+            </div>
+
+              <div class="row">
+				  <h3 class="center">Citation</h3>
+                <div class="col l12 m12 s12">
+                  <p>
+
+ 
+                 </p>
+			
+                </div>
+              </div>
+            </div>
+
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
