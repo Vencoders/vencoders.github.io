@@ -315,6 +315,9 @@
                                   <p style="font-size: 18pt; text-align: left;">
                                       Point cloud sampling method based on Transformer
                                   </p>
+				  <p style="font-size: 10pt; text-align: left;">
+                                      2024, 计算机与数字工程
+                                  </p>
                                   <p>
                                       we propose a novel 3D point cloud up-sampling method based on Transformers aiming to explore the po-tential of Transformers in this domain. Initially, a two-step network is employed, transitioning from rough dense point cloud generation to point cloud refinement, with each sub-network focusing on specific objec-tives. The coarse generation network aims to increase point cloud resolution, utilizing multiple densely connected convolutional blocks to extract deep high-dimensional features. To efficiently explore the up-sampling space of point clouds, an innovative integration of upsampling module with Transformer is in-troduced. While the rough generation of point clouds increases the number of points, correction of noise points is essential. In the refinement network, an adaptive refinement module is introduced, capable of au-tonomously aggregating structural information based on local point cloud characteristics.
 
@@ -337,6 +340,9 @@
                               <div class="" >
                                   <p style="font-size: 18pt; text-align: left;">
                                       Point Cloud Upsampling via Implicit Shape Priors Discovery and Refinement
+                                  </p>
+				 <p style="font-size: 10pt; text-align: left;">
+                                      2024, under submission
                                   </p>
                                   <p>
                                       The point clouds obtained by scanning sensors are often sparse and non-uniform, therefore, point cloud upsampling is of vital importance. This paper considers geometric priors as a rich source to guide point cloud generation for the better qualities. However, it is less flexible to explicitly exploit geometric priors of object surface, such as local geometric smoothness and fairness. In light of this, this paper proposes a novel two-stage method via discovering and exploiting implicit shape priors, which can consist of coarse point cloud upsampling and fine details refining. Specifically, at the first stage, we explore to discover geometric priors in an implicit manner via Dual Transformer, which simultaneously addressing local and global information during feature encoding, while a Neighborhood Refinement module is proposed to handle with geometric irregularities and noises via exploiting feature similarity of neighboring points. Extensive experiments on synthetic and real datasets can verify our motivation, as our method can gain superior performance to existing upsampling methods, especially with noisy point clouds. 
