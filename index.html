@@ -184,293 +184,421 @@
               <div class="card-content" style="color: #30505D;">
                 <span class="card-title" style="">Projects</span>
                 <div class="project-item">
-                  <table>
+                  <h3>2024</h3>
+                    <table>
+                      <tr>
+                        <td style="width: 30%">
+                          <div class="project-logo">
+                            <a href="https://vencoders.github.io/selfvqa.html"><img src="images/svqa.png"
+                                style="width: 100%"></a>
+                          </div>
+                        </td>
+                        <td style="width: 70%;">
+                          <div class="">
+                            <p style="font-size: 18pt; text-align: left;">
+                              基于自监督学习与多尺度时空特征融合的视频质量评估
+                            </p>
+                            <p style="font-size: 10pt; text-align: left;">
+                              2024, 计算机系统应用
+                            </p>
+                            <p>
+                              面对视频质量评估领域标记数据不足的问题, 研究者开始转向自监督学习方法, 旨在借助大量未标记数据以学习视频质量评估模型.
+                              然而现有自监督学习方法主要聚焦于视频的失真类型和视频内容信息, 忽略了视频随时间变化的动态信息和时空特征, 这导致在复杂动态场景下的评估效果不尽人意. 针对上述问题,
+                              提出了一种新的自监督学习方法, 通过播放速度预测作为预训练的辅助任务, 使模型能更好地捕捉视频的动态变化和时空特征, 并结合失真类型预测和对比学习,
+                              增强模型对视频质量差异的敏感性学习. 同时, 为了更全面捕捉视频的时空特征, 进一步设计了多尺度时空特征提取模块等以加强模型的时空建模能力. 实验结果显示,
+                              所提方法在LIVE、CSIQ以及LIVE-VQC数据集上, 性能显著优于现有的基于自监督学习的方法, 在LIVE-VQC数据集上, 本方法在PLCC指标上平均提升7.90%,
+                              最高提升17.70%. 同样, 在KoNVid-1k数据集上也展现了相当的竞争力. 这些结果表明, 提出的自监督学习框架有效增强了视频质量评估模型的动态特征捕捉能力,
+                              并在处理复杂动态视频中显示出独特优势.
+                            </p>
+                            <p>
 
-                    <tr>
-                      <td style="width: 30%">
-                        <div class="project-logo">
-                          <a href="https://vencoders.github.io/natural-transfer.html"><img src="images/frame3.png" style="width: 100%"></a>
-                        </div>
-                      </td>
-                      <td style="width: 70%;">
-                        <div class="" >
-                          <p style="font-size: 18pt; text-align: left;">
-                            Neural texture transfer assisted video coding with adaptive up-sampling
-                          </p>
-                          <p>
-                            A neural texture transfer-assisted video coding with an adaptive up-sampling scheme is proposed in this paper. This scheme adaptively decides whether a frame should be down-sampled or not. In  the decoder, the down-sampled frames are restored by exploring their correlations with the frames that are not down-sampled using neural texture transfer in a multi-scale manner.    
-                          </p>
-                          <p>
-                            <a href="https://vencoders.github.io/natural-transfer">[Project]</a>
-							<a href="https://weizequan.github.io/SPIC2022/paper.pdf">[PDF]</a>
-							<a href="https://github.com/Vencoders/Ref-frame-encode">[Code]</a>
-                          </p>
-                        </div>
-                      </td>
-                    </tr>
-					
-					
-					<tr>
-					  <td style="width: 30%">
-					    <div class="project-logo">
-					      <a href="https://vencoders.github.io/hfcgcnn.html"><img src="images/frame4.png" style="width: 100%"></a>
-					    </div>
-					  </td>
-					  <td style="width: 70%;">
-					    <div class="" >
-					      <p style="font-size: 18pt; text-align: left;">
-					        High-frequency guided CNN for video compression artifacts reduction
-					      </p>
-					      <p>
-					        This paper proposes the HFCG-CNN for video compression artifacts reduction, consisting of high-frequency guidance module and quality enhancement module. The high-frequency guidance module explicitly extracts the high-frequency information in the Y component. Then, the high-frequency information is used in the quality enhancement module to guide the recovery of all Y, U and V components. The experiment results demonstrate the effectiveness of the proposed HFCGCNN method.  
-					      </p>
-					      <p>
-					        <a href="https://vencoders.github.io/hfcgcnn">[Project]</a>
-							<a href="https://ieeexplore.ieee.org/abstract/document/10008814/">[PDF]</a>
-							<a href="https://github.com/Vencoders/HFCG-CNN">[Code]</a>
-					      </p>
-					    </div>
-					  </td>
-					</tr>
+                              <a href="https://vencoders.github.io/selfvqa.html">[Project]</a>
+                              <a href="https://pan.baidu.com/s/1-cTy1Isl_p5yVr8ebDxabg?pwd=z6vl">[PDF]</a>
+                              <a href="https://github.com/Vencoders/Self-supervised-video-quality-assessment">[Code]</a>
+                            </p>
+                          </div>
+                        </td>
+                      </tr>
 
-          
-          <tr>
-					  <td style="width: 30%">
-					    <div class="project-logo">
-					      <a href="https://vencoders.github.io/mamiqa.html"><img src="images/mamiqa1.png" style="width: 100%"></a>
-					    </div>
-					  </td>
-					  <td style="width: 70%;">
-					    <div class="" >
-					      <p style="font-size: 18pt; text-align: left;">
-					        MAMIQA: No-Reference Image Quality Assessment based on Multiscale Attention Mechanism with Natural Scene Statistics
-					      </p>
-						<p style="font-size: 10pt; text-align: left;">
-                                      		2023, IEEE Signal Processing Letters(SPL)
-                                  		</p>
-					      <p>
-                  No-Reference Image Quality Assessment aims to evaluate the perceptual quality of an image, according to human perception. This paper propose a lightweight attention mechanism using decomposed large-kernel convolutions to extract multiscale features, and a novel feature enhancement module to simulate HVS. We also propose to compensate the information loss caused by image resizing, with supplementary features from natural scene statistics. Experimental results on five standard datasets show that the proposed method surpasses the SOTA, while significantly reducing the computational costs.
-					      </p>
-					      <p>
-					        <a href="https://vencoders.github.io/mamiqa">[Project]</a>
-							<a href="https://ieeexplore.ieee.org/document/10124974">[PDF]</a>
-							<a href="https://github.com/Vencoders/MAMIQA">[Code]</a>
-					      </p>
-					    </div>
-					  </td>
-					</tr>
-
-          <tr>
-					  <td style="width: 30%">
-					    <div class="project-logo">
-					      <a href="https://vencoders.github.io/tvqe.html"><img src="images/tvqe.jpg" style="width: 100%"></a>
-					    </div>
-					  </td>
-					  <td style="width: 70%;">
-					    <div class="" >
-					      <p style="font-size: 18pt; text-align: left;">
-					        End-to-end Transformer for Compressed Video Quality Enhancement
-					      </p>
-					      <p style="font-size: 10pt; text-align: left;">
-                                              2024,  IEEE Transactions on Broadcasting
-                                              </p>
-					      <p>
-					        We propose a Transformer-based compressed video quality enhancement(TVQE) method, consisting of Transformer based Spatio-Temporal feature Fusion (TSTF) module and Multi-scale Channel-wise Attention based Quality Enhancement (MCQE) module.
-					      </p>
-					      <p>
-					        <a href="https://vencoders.github.io/tvqe.html">[Project]</a>
-							<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10332936">[PDF]</a>
-							<a href="https://github.com/Vencoders/TVQE">[Code]</a>
-					      </p>
-					    </div>
-					  </td>
-					</tr>
 
                       <tr>
-                          <td style="width: 30%">
-                              <div class="project-logo">
-                                  <a href="https://vencoders.github.io/PII.html"><img src="images/f1.png" style="width: 100%"></a>
-                              </div>
-                          </td>
-                          <td style="width: 70%;">
-                              <div class="" >
-                                  <p style="font-size: 18pt; text-align: left;">
-                                      PANORAMIC IMAGE INPAINTING WITH GATED CONVOLUTION AND CONTEXTUAL RECONSTRUCTION LOSS
-                                  </p>
-				  <p style="font-size: 10pt; text-align: left;">
-                                      2024,  IEEE International Conference on Acoustics, Speech and Signal Processing（ICASSP）
-                                  </p>
-                                  <p>
-                                      we propose a panoramic image inpainting framework that consists of a Face Generator, a Cube Generator, a side branch, and two discriminators. We use the Cubemap Projection (CMP) format as network input.
-                                      The generator employs gated convolutions to distinguish valid pixels from invalid ones, while a side branch is designed utilizing contextual reconstruction (CR) loss to guide the generators to find the most suitable reference patch for inpainting the missing region.
-
-                                  </p>
-                                  <p>
-                                      <a href="https://vencoders.github.io/PII.html">[Project]</a>
-                                      <a href="https://arxiv.org/pdf/2402.02936">[PDF]</a>
-                                      <a href="https://github.com/Vencoders/Panoramic-image-inpainting">[Code]</a>
-                                  </p>
-                              </div>
-                          </td>
+                        <td style="width: 30%">
+                          <div class="project-logo">
+                            <a href="https://vencoders.github.io/MAESR360.html"><img src="images/MAESR360_framework.png"
+                                style="width: 100%"></a>
+                          </div>
+                        </td>
+                        <td style="width: 70%;">
+                          <div class="">
+                            <p style="font-size: 18pt; text-align: left;">
+                              MAESR360: Masked autoencoder-based 360-degree video streaming via multi-scale feature
+                              fusion
+                            </p>
+                            <p style="font-size: 10pt; text-align: left;">
+                              2024, Visual Communication and Image Processing Conference (VCIP)
+                            </p>
+                            <p>
+                              360-degree video streaming is becoming increasingly popular for its immersive experience.
+                              Traditional adaptive tile-based streaming methods allocate the bitrates according to
+                              viewport prediction, which effectively reduces required transmission bandwidth, but it
+                              will cause serious quality degradation when the viewport prediction is inaccurate. Thus,
+                              some researchers propose visual reconstruction and enhancement-based 360-degree video
+                              streaming framework, which can reconstructs the whole frame at very low bitrates. However,
+                              existing frameworks are built upon image-based visual reconstruction methods, which do not
+                              fully consider the characteristics of videos. In this paper, we propose a masked
+                              autoencoder-based, multi-scale optimized framework for 360-degree video streaming
+                              (MAESR360), which fully considers the temporal relevance of the video. We utilize
+                              spatio-temporal downsampling and high-ratio tube masking strategies to effectively reduce
+                              the amount of transmitted data. Additionally, we design a lightweight visual
+                              reconstruction model based on multi-scale feature fusion to recover the visual quality of
+                              video frames. The effectiveness of our proposed method is demonstrated through extensive
+                              experiments.
+                            </p>
+                            <p>
+                              <a href="https://vencoders.github.io/MAESR360.html">[Project]</a>
+                              <a href="https://www.alipan.com/s/haKj2hy9tY2">[PDF]</a>
+                              <a href="https://www.alipan.com/s/k37JQWxqYUk">[PPT]</a>
+                              <a href="https://github.com/Vencoders/MAESR360">[Code]</a>
+                            </p>
+                          </div>
+                        </td>
                       </tr>
-		      <tr>
-                          <td style="width: 30%">
-                              <div class="project-logo">
-                                  <a href="https://vencoders.github.io/PU-AT.html"><img src="images/PU-AT1.png" style="width: 100%"></a>
-                              </div>
-                          </td>
-                          <td style="width: 70%;">
-                              <div class="" >
-                                  <p style="font-size: 18pt; text-align: left;">
-                                      Point cloud sampling method based on Transformer
-                                  </p>
-				  <p style="font-size: 10pt; text-align: left;">
-                                      2024, 计算机与数字工程
-                                  </p>
-                                  <p>
-                                      we propose a novel 3D point cloud up-sampling method based on Transformers aiming to explore the po-tential of Transformers in this domain. Initially, a two-step network is employed, transitioning from rough dense point cloud generation to point cloud refinement, with each sub-network focusing on specific objec-tives. The coarse generation network aims to increase point cloud resolution, utilizing multiple densely connected convolutional blocks to extract deep high-dimensional features. To efficiently explore the up-sampling space of point clouds, an innovative integration of upsampling module with Transformer is in-troduced. While the rough generation of point clouds increases the number of points, correction of noise points is essential. In the refinement network, an adaptive refinement module is introduced, capable of au-tonomously aggregating structural information based on local point cloud characteristics.
+                      
 
-                                  </p>
-                                  <p>
-                                      <a href="https://vencoders.github.io/PU-AT.html">[Project]</a>
-                                      <a href="">[PDF]</a>
-                                      <a href="https://github.com/Vencoders/PU-AT">[Code]</a>
-                                  </p>
-                              </div>
-                          </td>
+                      <tr>
+                        <td style="width: 30%">
+                          <div class="project-logo">
+                            <a href="https://vencoders.github.io/JICD.html"><img src="images/overviewjicd.png"
+                                style="width: 100%"></a>
+                          </div>
+                        </td>
+                        <td style="width: 70%;">
+                          <div class="">
+                            <p style="font-size: 18pt; text-align: left;">
+                              JOINT END-TO-END IMAGE COMPRESSION AND DENOISING: LEVERAGING CONTRASTIVE LEARNING AND
+                              MULTI-SCALE SELF-ONNS
+                            </p>
+                            <p style="font-size: 10pt; text-align: left;">
+                              2024, IEEE International Conference on Image Processing（ICIP）
+                            </p>
+                            <p>
+                              Noisy images are a challenge to image compression algorithms due to the inherent
+                              difficulty of compressing noise. As noise cannot easily be discerned from image details,
+                              such as high-frequency signals, its presence leads to extra bits needed for compression.
+                              Since the emerging learned image compression paradigm enables end-to-end optimization of
+                              codecs, recent efforts were made to integrate denoising into the compression model,
+                              relying on clean image features to guide denoising. However, these methods exhibit
+                              suboptimal performance under high noise levels, lacking the capability to generalize
+                              across diverse noise types. In this paper, we propose a novel method integrating a
+                              multi-scale denoiser comprising of Self Organizing Operational Neural Networks, for joint
+                              image compression and denoising. We employ contrastive learning to boost the network
+                              ability to differentiate noise from high frequency signal components, by emphasizing the
+                              correlation between noisy and clean counterparts. Experimental results demonstrate the
+                              effectiveness of the proposed method both in ratedistortion performance, and codec speed,
+                              outperforming the current state-of-the-art.
+                            </p>
+                            <p>
+                              <a href="https://vencoders.github.io/JICD.html">[Project]</a>
+                              <a href="https://arxiv.org/pdf/2402.05582">[PDF]</a>
+                              <a href="https://github.com/Vencoders/Joint-image-denoising-and-compression">[Code]</a>
+                            </p>
+                          </div>
+                        </td>
                       </tr>
-			<tr>
-                          <td style="width: 30%">
-                              <div class="project-logo">
-                                  <a href="https://vencoders.github.io/PU-DT.html"><img src="images/PU-DTframework.png" style="width: 100%"></a>
-                              </div>
-                          </td>
-                          <td style="width: 70%;">
-                              <div class="" >
-                                  <p style="font-size: 18pt; text-align: left;">
-                                      Point Cloud Upsampling via Implicit Shape Priors Discovery and Refinement
-                                  </p>
-				 <p style="font-size: 10pt; text-align: left;">
-                                      2024, under submission
-                                  </p>
-                                  <p>
-                                      The point clouds obtained by scanning sensors are often sparse and non-uniform, therefore, point cloud upsampling is of vital importance. This paper considers geometric priors as a rich source to guide point cloud generation for the better qualities. However, it is less flexible to explicitly exploit geometric priors of object surface, such as local geometric smoothness and fairness. In light of this, this paper proposes a novel two-stage method via discovering and exploiting implicit shape priors, which can consist of coarse point cloud upsampling and fine details refining. Specifically, at the first stage, we explore to discover geometric priors in an implicit manner via Dual Transformer, which simultaneously addressing local and global information during feature encoding, while a Neighborhood Refinement module is proposed to handle with geometric irregularities and noises via exploiting feature similarity of neighboring points. Extensive experiments on synthetic and real datasets can verify our motivation, as our method can gain superior performance to existing upsampling methods, especially with noisy point clouds. 
 
-                                  </p>
-                                  <p>
-                                      <a href="https://vencoders.github.io/PU-DT.html">[Project]</a>
-                                      <a href="">[PDF]</a>
-                                      <a href="https://github.com/Vencoders/PU-DT">[Code]</a>
-                                  </p>
-                              </div>
-                          </td>
+
+                      <tr>
+                        <td style="width: 30%">
+                          <div class="project-logo">
+                            <a href="https://vencoders.github.io/PU-AT.html"><img src="images/multi-swin_net.png"
+                                style="width: 100%"></a>
+                          </div>
+                        </td>
+                        <td style="width: 70%;">
+                          <div class="">
+                            <p style="font-size: 18pt; text-align: left;">
+                              Multi-Swin Transformer based Spatio-Temporal Information Exploration for Compressed
+                              Video
+                              Quality Enhancement
+                            </p>
+                            <p style="font-size: 10pt; text-align: left;">
+                              2024, IEEE Signal Processing Letters (SPL)
+                            </p>
+                            <p>
+                              Spatio-temporal information plays an important role in compressed video quality
+                              enhancement. Most advanced studies use deformable convolution or Swin transformer to
+                              explore spatio-temporal information. However, deformable convolution based methods may
+                              incur inaccurate motion compensation due to the compression artifacts and limited
+                              receptive fields. The Swin transformer based approaches are unable to fully explore the
+                              spatio-temporal information, limited by its rigid window-based mechanism. To solve the
+                              above problems, we propose a novel multi-Swin transformer-based network for compressed
+                              video quality enhancement to better explore spatio-temporal information. The whole
+                              workflow consists of the Local Alignment (LA) Module, the Global Refinement Fusion (GRF)
+                              Module, and the Quality Enhancement (QE) Module. The LA module roughly perceives the local
+                              motion through the deformable fusion. Subsequently, the GRF module employs the proposed
+                              multi-Swin transformer to enhance the spatio-temporal perception. Finally, the QE module
+                              effectively restores the texture details across various scales. Extensive experimental
+                              results prove the effectiveness of the proposed method.
+
+                            </p>
+                            <p>
+                              <a href="https://vencoders.github.io/multi-swin.html">[Project]</a>
+                              <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10599772">[PDF]</a>
+                              <a href="https://github.com/Vencoders/Multi-Swin">[Code]</a>
+                            </p>
+                          </div>
+                        </td>
                       </tr>
-			<tr>
-			  <td style="width: 30%">
-			      <div class="project-logo">
-				  <a href="https://vencoders.github.io/PU-AT.html"><img src="images/multi-swin_net.png" style="width: 100%"></a>
-			      </div>
-			  </td>
-			  <td style="width: 70%;">
-			      <div class="" >
-				  <p style="font-size: 18pt; text-align: left;">
-				      Multi-Swin Transformer based Spatio-Temporal Information Exploration for Compressed Video Quality Enhancement
-				  </p>
-				  <p style="font-size: 10pt; text-align: left;">
-                                              2024,  IEEE Signal Processing Letters (SPL)
-                                  </p>
-				  <p>
-				      Spatio-temporal information plays an important role in compressed video quality enhancement. Most advanced studies use deformable convolution or Swin transformer to explore spatio-temporal information. However, deformable convolution based methods may incur inaccurate motion compensation due to the compression artifacts and limited receptive fields. The Swin transformer based approaches are unable to fully explore the spatio-temporal information, limited by its rigid window-based mechanism. To solve the above problems, we propose a novel multi-Swin transformer-based network for compressed video quality enhancement to better explore spatio-temporal information. The whole workflow consists of the Local Alignment (LA) Module, the Global Refinement Fusion (GRF) Module, and the Quality Enhancement (QE) Module. The LA module roughly perceives the local motion through the deformable fusion. Subsequently, the GRF module employs the proposed multi-Swin transformer to enhance the spatio-temporal perception. Finally, the QE module effectively restores the texture details across various scales. Extensive experimental results prove the effectiveness of the proposed method.
-	
-				  </p>
-				  <p>
-				      <a href="https://vencoders.github.io/multi-swin.html">[Project]</a>
-				      <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10599772">[PDF]</a>
-				      <a href="https://github.com/Vencoders/Multi-Swin">[Code]</a>
-				  </p>
-			      </div>
-			  </td>
-		      </tr>
-		      <tr>
-                          <td style="width: 30%">
-                              <div class="project-logo">
-                                  <a href="https://vencoders.github.io/JICD.html"><img src="images/overviewjicd.png" style="width: 100%"></a>
-                              </div>
-                          </td>
-                          <td style="width: 70%;">
-                              <div class="" >
-                                  <p style="font-size: 18pt; text-align: left;">
-                                      JOINT END-TO-END IMAGE COMPRESSION AND DENOISING: LEVERAGING CONTRASTIVE LEARNING AND MULTI-SCALE SELF-ONNS
-                                  </p>
-				  <p style="font-size: 10pt; text-align: left;">
-                                      2024, IEEE International Conference on Image Processing（ICIP）
-                                  </p>
-                                  <p>
-                                      Noisy images are a challenge to image compression algorithms due to the inherent difficulty of compressing noise. As noise cannot easily be discerned from image details, such as high-frequency signals, its presence leads to extra bits needed for compression. Since the emerging learned image compression paradigm enables end-to-end optimization of codecs, recent efforts were made to integrate denoising into the compression model, relying on clean image features to guide denoising. However, these methods exhibit suboptimal performance under high noise levels, lacking the capability to generalize across diverse noise types. In this paper, we propose a novel method integrating a multi-scale denoiser comprising of Self Organizing Operational Neural Networks, for joint image compression and denoising. We employ contrastive learning to boost the network ability to differentiate noise from high frequency signal components, by emphasizing the correlation between noisy and clean counterparts. Experimental results demonstrate the effectiveness of the proposed method both in ratedistortion performance, and codec speed, outperforming the current state-of-the-art.
-                                  </p>
-                                  <p>
-                                      <a href="https://vencoders.github.io/JICD.html">[Project]</a>
-                                      <a href="https://arxiv.org/pdf/2402.05582">[PDF]</a>
-                                      <a href="https://github.com/Vencoders/Joint-image-denoising-and-compression">[Code]</a>
-                                  </p>
-                              </div>
-                          </td>
-                        </tr>
-			
-			<tr>
-                          <td style="width: 30%">
-                              <div class="project-logo">
-                                  <a href="https://vencoders.github.io/MAESR360.html"><img src="images/MAESR360_framework.png" style="width: 100%"></a>
-                              </div>
-                          </td>
-                          <td style="width: 70%;">
-                              <div class="" >
-                                  <p style="font-size: 18pt; text-align: left;">
-                                      MAESR360: Masked autoencoder-based 360-degree video streaming via multi-scale feature fusion
-                                  </p>
-				  <p style="font-size: 10pt; text-align: left;">
-                                      2024, Visual Communication and Image Processing Conference (VCIP)
-                                  </p>
-                                  <p>
-				      360-degree video streaming is becoming increasingly popular for its immersive experience. Traditional adaptive tile-based  streaming methods allocate the bitrates according to viewport prediction, which effectively reduces required transmission bandwidth, but it will cause serious quality degradation when the viewport prediction is inaccurate. Thus, some researchers propose visual reconstruction and enhancement-based 360-degree video streaming framework, which can reconstructs the whole frame at very low bitrates. However, existing frameworks are built upon image-based visual reconstruction methods, which do not fully consider the characteristics of videos. In this paper, we propose a masked autoencoder-based, multi-scale optimized framework for 360-degree video streaming (MAESR360), which fully considers the temporal relevance of the video. We utilize spatio-temporal downsampling and high-ratio tube masking strategies to effectively reduce the amount of transmitted data. Additionally, we design a lightweight visual reconstruction model based on multi-scale feature fusion to recover the visual quality of video frames. The effectiveness of our proposed method is demonstrated through extensive experiments.
-                                  </p>
-                                  <p>
-                                      <a href="https://vencoders.github.io/MAESR360.html">[Project]</a>
-                                      <a href="https://www.alipan.com/s/haKj2hy9tY2">[PDF]</a>
-				      <a href="https://www.alipan.com/s/k37JQWxqYUk">[PPT]</a>
-                                      <a href="https://github.com/Vencoders/MAESR360">[Code]</a>
-                                  </p>
-                              </div>
-                          </td>
-                        </tr>
 
-			<tr>
-                          <td style="width: 30%">
-                              <div class="project-logo">
-                                  <a href="https://vencoders.github.io/selfvqa.html"><img src="images/svqa.png" style="width: 100%"></a>
-                              </div>
-                          </td>
-                          <td style="width: 70%;">
-                              <div class="" >
-                                  <p style="font-size: 18pt; text-align: left;">
-                                      基于自监督学习与多尺度时空特征融合的视频质量评估
-                                  </p>
-				  <p style="font-size: 10pt; text-align: left;">
-                                      2024, 计算机系统应用
-                                  </p>
-                                  <p>
-                                      面对视频质量评估领域标记数据不足的问题, 研究者开始转向自监督学习方法, 旨在借助大量未标记数据以学习视频质量评估模型. 然而现有自监督学习方法主要聚焦于视频的失真类型和视频内容信息, 忽略了视频随时间变化的动态信息和时空特征, 这导致在复杂动态场景下的评估效果不尽人意. 针对上述问题, 提出了一种新的自监督学习方法, 通过播放速度预测作为预训练的辅助任务, 使模型能更好地捕捉视频的动态变化和时空特征, 并结合失真类型预测和对比学习, 增强模型对视频质量差异的敏感性学习. 同时, 为了更全面捕捉视频的时空特征, 进一步设计了多尺度时空特征提取模块等以加强模型的时空建模能力. 实验结果显示, 所提方法在LIVE、CSIQ以及LIVE-VQC数据集上, 性能显著优于现有的基于自监督学习的方法, 在LIVE-VQC数据集上, 本方法在PLCC指标上平均提升7.90%, 最高提升17.70%. 同样, 在KoNVid-1k数据集上也展现了相当的竞争力. 这些结果表明, 提出的自监督学习框架有效增强了视频质量评估模型的动态特征捕捉能力, 并在处理复杂动态视频中显示出独特优势.
-                                  </p>
-                                  <p>
-					  
-                                	<a href="https://vencoders.github.io/selfvqa.html">[Project]</a>
-                                	<a href="https://pan.baidu.com/s/1-cTy1Isl_p5yVr8ebDxabg?pwd=z6vl">[PDF]</a>
-					<a href="https://github.com/Vencoders/Self-supervised-video-quality-assessment">[Code]</a>
-                                  </p>
-                              </div>
-                          </td>
-                        </tr>
-                  </table>
+
+                      <tr>
+                        <td style="width: 30%">
+                          <div class="project-logo">
+                            <a href="https://vencoders.github.io/PU-DT.html"><img src="images/PU-DTframework.png"
+                                style="width: 100%"></a>
+                          </div>
+                        </td>
+                        <td style="width: 70%;">
+                          <div class="">
+                            <p style="font-size: 18pt; text-align: left;">
+                              Point Cloud Upsampling via Implicit Shape Priors Discovery and Refinement
+                            </p>
+                            <p style="font-size: 10pt; text-align: left;">
+                              2024, under submission
+                            </p>
+                            <p>
+                              The point clouds obtained by scanning sensors are often sparse and non-uniform, therefore,
+                              point cloud upsampling is of vital importance. This paper considers geometric priors as a
+                              rich source to guide point cloud generation for the better qualities. However, it is less
+                              flexible to explicitly exploit geometric priors of object surface, such as local geometric
+                              smoothness and fairness. In light of this, this paper proposes a novel two-stage method
+                              via discovering and exploiting implicit shape priors, which can consist of coarse point
+                              cloud upsampling and fine details refining. Specifically, at the first stage, we explore
+                              to discover geometric priors in an implicit manner via Dual Transformer, which
+                              simultaneously addressing local and global information during feature encoding, while a
+                              Neighborhood Refinement module is proposed to handle with geometric irregularities and
+                              noises via exploiting feature similarity of neighboring points. Extensive experiments on
+                              synthetic and real datasets can verify our motivation, as our method can gain superior
+                              performance to existing upsampling methods, especially with noisy point clouds.
+
+                            </p>
+                            <p>
+                              <a href="https://vencoders.github.io/PU-DT.html">[Project]</a>
+                              <a href="">[PDF]</a>
+                              <a href="https://github.com/Vencoders/PU-DT">[Code]</a>
+                            </p>
+                          </div>
+                        </td>
+                      </tr>
+
+
+                      <tr>
+                        <td style="width: 30%">
+                          <div class="project-logo">
+                            <a href="https://vencoders.github.io/PU-AT.html"><img src="images/PU-AT1.png"
+                                style="width: 100%"></a>
+                          </div>
+                        </td>
+                        <td style="width: 70%;">
+                          <div class="">
+                            <p style="font-size: 18pt; text-align: left;">
+                              Point cloud sampling method based on Transformer
+                            </p>
+                            <p style="font-size: 10pt; text-align: left;">
+                              2024, 计算机与数字工程
+                            </p>
+                            <p>
+                              we propose a novel 3D point cloud up-sampling method based on Transformers aiming to
+                              explore the po-tential of Transformers in this domain. Initially, a two-step network is
+                              employed, transitioning from rough dense point cloud generation to point cloud refinement,
+                              with each sub-network focusing on specific objec-tives. The coarse generation network aims
+                              to increase point cloud resolution, utilizing multiple densely connected convolutional
+                              blocks to extract deep high-dimensional features. To efficiently explore the up-sampling
+                              space of point clouds, an innovative integration of upsampling module with Transformer is
+                              in-troduced. While the rough generation of point clouds increases the number of points,
+                              correction of noise points is essential. In the refinement network, an adaptive refinement
+                              module is introduced, capable of au-tonomously aggregating structural information based on
+                              local point cloud characteristics.
+
+                            </p>
+                            <p>
+                              <a href="https://vencoders.github.io/PU-AT.html">[Project]</a>
+                              <a href="">[PDF]</a>
+                              <a href="https://github.com/Vencoders/PU-AT">[Code]</a>
+                            </p>
+                          </div>
+                        </td>
+                      </tr>
+
+
+                      <tr>
+                        <td style="width: 30%">
+                          <div class="project-logo">
+                            <a href="https://vencoders.github.io/PII.html"><img src="images/f1.png"
+                                style="width: 100%"></a>
+                          </div>
+                        </td>
+                        <td style="width: 70%;">
+                          <div class="">
+                            <p style="font-size: 18pt; text-align: left;">
+                              PANORAMIC IMAGE INPAINTING WITH GATED CONVOLUTION AND CONTEXTUAL RECONSTRUCTION LOSS
+                            </p>
+                            <p style="font-size: 10pt; text-align: left;">
+                              2024, IEEE International Conference on Acoustics, Speech and Signal Processing（ICASSP）
+                            </p>
+                            <p>
+                              we propose a panoramic image inpainting framework that consists of a Face Generator, a
+                              Cube Generator, a side branch, and two discriminators. We use the Cubemap Projection (CMP)
+                              format as network input.
+                              The generator employs gated convolutions to distinguish valid pixels from invalid ones,
+                              while a side branch is designed utilizing contextual reconstruction (CR) loss to guide the
+                              generators to find the most suitable reference patch for inpainting the missing region.
+
+                            </p>
+                            <p>
+                              <a href="https://vencoders.github.io/PII.html">[Project]</a>
+                              <a href="https://arxiv.org/pdf/2402.02936">[PDF]</a>
+                              <a href="https://github.com/Vencoders/Panoramic-image-inpainting">[Code]</a>
+                            </p>
+                          </div>
+                        </td>
+                      </tr>
+                      
+
+                      <tr>
+                        <td style="width: 30%">
+                          <div class="project-logo">
+                            <a href="https://vencoders.github.io/tvqe.html"><img src="images/tvqe.jpg"
+                                style="width: 100%"></a>
+                          </div>
+                        </td>
+                        <td style="width: 70%;">
+                          <div class="">
+                            <p style="font-size: 18pt; text-align: left;">
+                              End-to-end Transformer for Compressed Video Quality Enhancement
+                            </p>
+                            <p style="font-size: 10pt; text-align: left;">
+                              2024, IEEE Transactions on Broadcasting
+                            </p>
+                            <p>
+                              We propose a Transformer-based compressed video quality enhancement(TVQE) method,
+                              consisting of Transformer based Spatio-Temporal feature Fusion (TSTF) module and
+                              Multi-scale Channel-wise Attention based Quality Enhancement (MCQE) module.
+                            </p>
+                            <p>
+                              <a href="https://vencoders.github.io/tvqe.html">[Project]</a>
+                              <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10332936">[PDF]</a>
+                              <a href="https://github.com/Vencoders/TVQE">[Code]</a>
+                            </p>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+
+                    <h3>2023</h3>
+                    <table>
+                      <tr>
+                        <td style="width: 30%">
+                          <div class="project-logo">
+                            <a href="https://vencoders.github.io/mamiqa.html"><img src="images/mamiqa1.png"
+                                style="width: 100%"></a>
+                          </div>
+                        </td>
+                        <td style="width: 70%;">
+                          <div class="">
+                            <p style="font-size: 18pt; text-align: left;">
+                              MAMIQA: No-Reference Image Quality Assessment based on Multiscale Attention Mechanism
+                              with
+                              Natural Scene Statistics
+                            </p>
+                            <p style="font-size: 10pt; text-align: left;">
+                              2023, IEEE Signal Processing Letters(SPL)
+                            </p>
+                            <p>
+                              No-Reference Image Quality Assessment aims to evaluate the perceptual quality of an image,
+                              according to human perception. This paper propose a lightweight attention mechanism using
+                              decomposed large-kernel convolutions to extract multiscale features, and a novel feature
+                              enhancement module to simulate HVS. We also propose to compensate the information loss
+                              caused by image resizing, with supplementary features from natural scene statistics.
+                              Experimental results on five standard datasets show that the proposed method surpasses the
+                              SOTA, while significantly reducing the computational costs.
+                            </p>
+                            <p>
+                              <a href="https://vencoders.github.io/mamiqa">[Project]</a>
+                              <a href="https://ieeexplore.ieee.org/document/10124974">[PDF]</a>
+                              <a href="https://github.com/Vencoders/MAMIQA">[Code]</a>
+                            </p>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+
+                    <h3>2022</h3>
+                    <table>
+                      <tr>
+                        <td style="width: 30%">
+                          <div class="project-logo">
+                            <a href="https://vencoders.github.io/hfcgcnn.html"><img src="images/frame4.png"
+                                style="width: 100%"></a>
+                          </div>
+                        </td>
+                        <td style="width: 70%;">
+                          <div class="">
+                            <p style="font-size: 18pt; text-align: left;">
+                              High-frequency guided CNN for video compression artifacts reduction
+                            </p>
+                            <p style="font-size: 10pt; text-align: left;">
+                              2022, IEEE International Conference on Visual Communications and Image Processing (VCIP)
+                            </p>
+                            <p>
+                              This paper proposes the HFCG-CNN for video compression artifacts reduction, consisting of
+                              high-frequency guidance module and quality enhancement module. The high-frequency guidance
+                              module explicitly extracts the high-frequency information in the Y component. Then, the
+                              high-frequency information is used in the quality enhancement module to guide the recovery
+                              of all Y, U and V components. The experiment results demonstrate the effectiveness of the
+                              proposed HFCGCNN method.
+                            </p>
+                            <p>
+                              <a href="https://vencoders.github.io/hfcgcnn.html">[Project]</a>
+                              <a href="https://ieeexplore.ieee.org/abstract/document/10008814/">[PDF]</a>
+                              <a href="https://github.com/Vencoders/HFCG-CNN">[Code]</a>
+                            </p>
+                          </div>
+                        </td>
+                      </tr>
+
+
+                      <tr>
+                        <td style="width: 30%">
+                          <div class="project-logo">
+                            <a href="https://vencoders.github.io/natural-transfer.html"><img src="images/frame3.png"
+                                style="width: 100%"></a>
+                          </div>
+                        </td>
+                        <td style="width: 70%;">
+                          <div class="">
+                            <p style="font-size: 18pt; text-align: left;">
+                              Neural texture transfer assisted video coding with adaptive up-sampling
+                            </p>
+                            <p style="font-size: 10pt; text-align: left;">
+                              2022, Signal Processing: Image Communication
+                            </p>
+                            <p>
+                              A neural texture transfer-assisted video coding with an adaptive up-sampling scheme is
+                              proposed in this paper. This scheme adaptively decides whether a frame should be
+                              down-sampled or not. In the decoder, the down-sampled frames are restored by exploring
+                              their correlations with the frames that are not down-sampled using neural texture transfer
+                              in a multi-scale manner.
+                            </p>
+                            <p>
+                              <a href="https://vencoders.github.io/natural-transfer.html">[Project]</a>
+                              <a href="https://weizequan.github.io/SPIC2022/paper.pdf">[PDF]</a>
+                              <a href="https://github.com/Vencoders/Ref-frame-encode">[Code]</a>
+                            </p>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
                 </div>
 
               </div>
