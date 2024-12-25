@@ -18,6 +18,7 @@
   <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <style>
     body
     {
@@ -33,7 +34,10 @@
       background-image: url("images/vertical_Nov19.jpg");
       background-repeat: round;
     }
-
+     .formula{
+      display: inline;
+      font-style: italic;
+    }
     .profile-block
     {
       position: relative;
@@ -214,7 +218,7 @@
                 </div>
 
                 <div class="col l12 m12 s12">
-                  <p style="text-align: justify"><i class="material-icons tiny cyan-text">grade</i> Diagram of the proposed methods (in gray boxes), integrated into a typical video encoding/decoding flow. The video frames are adaptively divided into reference frames (RF) and non-reference frames (NF) by the proposed adaptive GOP method. The RFs are encoded at full resolution, while NFs are encoded at reduced resolution using the standard HEVC encoder. At the decoder, all frames are decoded by the standard HEVC decoder first. Then, the decoded full-resolution frame ðð¹ð· is used to facilitate the super-resolution of low-resolution ðð¹ð¿ðâðusing the proposed neural texture transfer network.  
+                  <p style="text-align: justify"><i class="material-icons tiny cyan-text">grade</i> Diagram of the proposed methods (in gray boxes), integrated into a typical video encoding/decoding flow. The video frames are adaptively divided into reference frames (RF) and non-reference frames (NF) by the proposed adaptive GOP method. The RFs are encoded at full resolution, while NFs are encoded at reduced resolution using the standard HEVC encoder. At the decoder, all frames are decoded by the standard HEVC decoder first. Then, the decoded full-resolution frame <span class="formula">\(RF_{D}\)</span> is used to facilitate the super-resolution of low-resolution <span class="formula">\(NF_{D}^{LR}\)</span> using the proposed neural texture transfer network.  
                   </p>
                 </div>
               </div>
@@ -222,7 +226,9 @@
               <div class="row">
                 <h3 class="center">Results</h3>
                 <div class="col l12 m12 s12">
-                  <img src="images/frame1.png" class="responsive-img">
+		    <img src="images/natural-transfer_result2.png" class="responsive-img">
+                    <img src="images/natural-transfer_result3.png" class="responsive-img">
+                    <img src="images/frame1.png" class="responsive-img">
 				  <img src="images/frame2.png" class="responsive-img">
                 </div>
 				
