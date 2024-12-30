@@ -215,7 +215,7 @@ Comprehensive experiments on the widely-used PointDA-10 dataset demonstrate that
               <div class="row">
                 <h3 class="center">Network Architecture</h3>
                 <div class="col l12 m12 s12">
-                  <img src="images/svqa.png" class="responsive-img">
+                  <img src="images/RL.png" class="responsive-img">
                 </div>
 
                 <div class="col l12 m12 s12">
@@ -228,9 +228,9 @@ Comprehensive experiments on the widely-used PointDA-10 dataset demonstrate that
                 <h3 class="center">Results</h3>
 <!--                 <div class="col l12 m12 s12"> -->
 		<div class="col l10 offset-l1 m8 offset-m2 s10 offset-s1 center-align">
-                  <img src="images/svqa_r1.png" class="responsive-img">
-		  <img src="images/svqa_r2.png" class="responsive-img">
-		  <img src="images/selfVqaResult.png" class="responsive-img">
+                  <img src="images/MR1.png" class="responsive-img">
+		  <img src="images/MV1.png" class="responsive-img">
+		  <img src="images/MV2.png" class="responsive-img">
                 </div>
 		  
               <div class="row">
