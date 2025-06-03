@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="images/YH.png" />
+    <title>Relevance-guided Audio Visual Fusion for Video Saliency Prediction</title>
+    <!--Import Google Icon Font-->
+    <!--<link href="http://fonts.useso.com/icon?family=Material+Icons" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        .vertical-nav {
+            margin: 0;
+            position: fixed;
+            width: 300px;
+            /*background-color: #343131;*/
+            min-height: 100%;
+            background-image: url("images/vertical_Nov19.jpg");
+            background-repeat: round;
+        }
+
+        .profile-block {
+            position: relative;
+            height: 300px;
+            /*background-color: #324D5C;*/
+        }
+
+        .profile-block-sm {
+            position: relative;
+            height: 200px;
+            /*background-color: #324D5C;*/
+        }
+
+        .profile {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 50%;
+            margin-left: 30px;
+            border: solid 5px #F4D03F;
+        }
+
+        .profile-sm {
+            /*position: absolute;*/
+            /*top: 50%;*/
+            /*left: 50%;*/
+            /*transform: translateX(50%);*/
+            border-radius: 50%;
+            margin: auto;
+            border: solid 5px #F4D03F;
+        }
+
+        .logo-link {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .card-content {
+            padding: 0 !important;
+        }
+
+        .card-title {
+            background-color: #FBD8B0;
+            padding: 12px;
+        }
+
+        p {
+            line-height: 150%;
+        }
+
+        li {
+            padding-bottom: 10px;
+        }
+
+        strong {
+            font-weight: bolder;
+        }
+
+        .project-item {
+        }
+
+        .project-logo {
+        }
+
+        .authors {
+            text-align: center;
+            width: 100%;
+            margin: auto;
+            font-size: 12pt;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .author {
+            font-weight: bold;
+            display: inline;
+            padding: 0 1em;
+        }
+
+        h3 {
+            font-size: xx-large;
+            display: block;
+            /*font-size: 1.5em;*/
+            margin-block-start: 0.83em;
+            margin-block-end: 0.83em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+        }
+
+        .bibtex {
+            padding-left: 20px;
+            font-family: Courier New, Courier, 'gandhi_sansregular', monospace;
+            white-space: pre;
+        }
+
+        ul.marked {
+            list-style-type: circle !important;
+        }
+
+        ul li::marker {
+            color: darkslategrey;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="">
+        <div style="">
+            <div class="container">
+                <div class="">
+                    <div class="row">
+                        <div class="col s12 m12 l10 offset-l1">
+                            <div class="title">
+                                <h2 class="center" style="margin-top: 120px; font-size: 32pt">
+                                    Relevance-guided Audio Visual Fusion for Video Saliency Prediction
+                                </h2>
+                                <!-- <p class="center" style="font-size: large"><a href="https://arxiv.org/abs/2002.03711">[ arxiv.org/abs/2002.03711 ]</a> -->
+                                <p class="center" style="font-size: large"><i>Under Review</i>
+                                <p class="center" style="font-size: large">
+                                    <a href="https://arxiv.org/abs/2411.11454">[ Paper ]</a>&nbsp<a href="https://github.com/Vencoders/FANeRV">[ Code ]</a>&nbsp<a href="https://arxiv.org/abs/2411.11454">[ PDF ]</a>
+                                    <!--                 <p class="center" style="font-size: large"><a href="https://github.com/Vencoders/PU-AT">[ Code ]</a> -->
+                            </div>
+                            <div class="authors">
+                                <!-- 			  <div class="author"><a href="https://huzi96.github.io/">Yueyu Hu</a></div><br class="hide-on-med-and-up"> -->
+                                <div class="author">Li Yu {li.yu@nuist.edu.cn}</a></div><br class="hide-on-med-and-up">
+                                <div class="author">Xuanzhe Sun {20221249031@nuist.edu.cn}</a></div><br class="hide-on-med-and-up">
+                                <div class="author">Pan Gao {pan.gao@nuaa.edu.cn}</a></div><br class="hide-on-med-and-up">
+                                <div class="author">Moncef Gabbouj {mon-cef.gabbouj@tuni.fi}</a></div><br class="hide-on-med-and-up">
+                            </div>
+                            <div class="abstract">
+                                <h3 class="center">Abstract</h3>
+                                <ul style="font-size: 13pt; text-align: justify">
+                                    <li>
+                                        <div>
+                                            <i class="material-icons tiny cyan-text">grade</i>
+                                            Audio data, often synchronized with video frames, plays a crucial role in guiding the audience’s visual attention. Incorporating audio information into video saliency prediction task can enhance the prediction of human visual behavior. However, existing audio-visual saliency prediction methods often directly fuse audio and visual features, without evaluating the semantic relevance between them. Fusing visual features with semantically irrelevant audio (e.g., background music) will introduce noise and degrade prediction performance. To address this issue, we propose a novel Audio-Visual Relevance-guided Saliency Prediction network (AVRSP). Specifically, the Relevance-guided Audio-Visual Feature Fusion module (RAVF) dynamically adjusts the retention of audio features based on the semantic relevance between audio and visual elements, thereby refining the fusion process with visual features. Furthermore, the Multi-scale feature Synergy (MS) module integrates visual features from different encoding stages, enhancing the network’s ability to represent objects at various scales. The Multi-scale Regulator Gate (MRG) transfers crucial fusion information to visual features, thus optimizing the utilization of multi-scale visual features. Extensive experiments on six audio-visual eye movement datasets demonstrate that the proposed AVRSP network achieves superior performance to recent methods, with improvements of 1.93%, 3.05%, and 3.81% in SIM, CC, and NSS respectively.
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="abstract">
+                                <h3 class="center">Highlights</h3>
+                                <ul style="font-size: 13pt; text-align: justify">
+                                    <li>
+                                        <div>
+                                            <i class="material-icons tiny cyan-text">grade</i>
+                                            A Relevance-guided Audio-Visual feature Fusion module (RAVF) adaptively modulates the incorporation of audio features based on their semantic relationships with visual content.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <i class="material-icons tiny  cyan-text">grade</i>
+                                            A Multi-scale feature Synergy (MS) module aggregates visual information from various encoding layers to enhance the model's representation capability in predicting salient objects across different scales.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <i class="material-icons tiny  cyan-text">grade</i>
+                                            Through the Multi-scale Regulator Gate (MRG), the proposed network overcomes the limitation of under-utilizing multi-scale visual features in traditional decoders.  MRG injects crucial fusion information into the visual feature decoding process, thereby significantly refining the decoding process and ensuring a more effective utilization of multi-scale visual information.
+                                        </div>
+                                    </li>
+                                 
+                                </ul>
+                            </div>
+                            <div class="experiment">
+
+                                <div class="row">
+                                    <h3 class="center">Network Architecture</h3>
+                                    <div class="col l12 m12 s12">
+                                        <img src="images/AVRSP-model.png" class="responsive-img">
+                                    </div>
+
+                                    <div class="col l12 m12 s12">
+                                        <p style="text-align: justify"><i class="material-icons tiny cyan-text">grade</i>The overall framework of our proposed method
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <h3 class="center">Results</h3>
+                                    <!--                 <div class="col l12 m12 s12"> -->
+                                    <div class="col l10 offset-l1 m8 offset-m2 s10 offset-s1 center-align">
+                                        <img src="images/AVRSP-Result.png" class="responsive-img">
+                                        <img src="images/AVRSP-visualization.png" class="responsive-img">
+
+
+                                    </div>
+
+
+
+                                    <div class="row">
+                                        <div class="col l12 m12 s12">
+                                            <p><strong>Please check our paper for detail results.</strong></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <h3 class="center">Citation</h3>
+                                    <div class="col l12 m12 s12">
+                                        <p>
+
+
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
