@@ -191,6 +191,33 @@
 		 <tr>
                         <td style="width: 30%">
                           <div class="project-logo">
+                            <a href="https://vencoders.github.io/TAVDiff.html"><img src="images/TAVDiff-model.png"
+                                style="width: 100%"></a>
+                          </div>
+                        </td>
+                        <td style="width: 70%;">
+                          <div class="">
+                            <p style="font-size: 18pt; text-align: left;">
+                              Text-Audio-Visual-conditioned Diffusion Model for Video Saliency Prediction
+                            </p>
+                            <p style="font-size: 10pt; text-align: left;">
+                              Under Review
+                            </p>
+                            <p>
+				Video saliency prediction is crucial for downstream applications, such as video compression and human-computer interaction. With the flourishing of multimodal learning, researchers increasingly explored multimodal video saliency prediction, including audio-visual and text-visual methods. Auditory cues attract the viewer's attention to sound sources, while textual cues offer semantic insights of video content which is aligned with human cognitive process. Integrating these complementary cues can improve the accuracy of saliency prediction. Therefore, we attempt to simultaneously analyze visual, auditory, and textual modalities in this paper, and propose TAVDiff, a Text-Audio-Visual-conditioned Diffusion Model for video saliency prediction. TAVDiff treats video saliency prediction as an image generation task conditioned on text, audio, and video inputs, and predicts saliency maps through stepwise denoising. To effectively utilize textual information, we employ a large multimodal model to generate textual descriptions for video frames and introduce the Saliency-Oriented Image-Text Response (SITR) mechanism. This generates image-text response maps that guide the model to focus on visual regions semantically related to the textual description. For auditory input, we use it as one of the conditional information to direct the model's attention toward salient regions indicated by sounds.  Additionally, since the diffusion transformer (DiT) typically concatenates conditional information with the timestep, potentially affecting noise estimation. We propose Saliency-DiT, which decouples conditional information from the timestep, enhancing effective conditional guidance. Experimental results show that TAVDiff outperforms existing methods, with an improvement of 1. 03%, 2. 35%, 2. 71% and 0. 33% in SIM, CC, NSS and AUC-J metrics, respectively.
+                            </p>
+                            <p>
+                              <a href="https://vencoders.github.io/TAVDiff.html">[Project]</a>
+                              <a href="https://arxiv.org/abs/2504.14267">[PDF]</a>
+                              <a href="https://github.com/Vencoders/FANeRV">[Code]</a>
+                            </p>
+                          </div>
+                        </td>
+                      </tr>
+			    
+		 <tr>
+                        <td style="width: 30%">
+                          <div class="project-logo">
                             <a href="https://vencoders.github.io/AVRSP.html"><img src="images/AVRSP-model.png"
                                 style="width: 100%"></a>
                           </div>
