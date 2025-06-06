@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="images/YH.png" />
+    <title>Relevance-guided Audio Visual Fusion for Video Saliency Prediction</title>
+    <!--Import Google Icon Font-->
+    <!--<link href="http://fonts.useso.com/icon?family=Material+Icons" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        .vertical-nav {
+            margin: 0;
+            position: fixed;
+            width: 300px;
+            /*background-color: #343131;*/
+            min-height: 100%;
+            background-image: url("images/vertical_Nov19.jpg");
+            background-repeat: round;
+        }
+
+        .profile-block {
+            position: relative;
+            height: 300px;
+            /*background-color: #324D5C;*/
+        }
+
+        .profile-block-sm {
+            position: relative;
+            height: 200px;
+            /*background-color: #324D5C;*/
+        }
+
+        .profile {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 50%;
+            margin-left: 30px;
+            border: solid 5px #F4D03F;
+        }
+
+        .profile-sm {
+            /*position: absolute;*/
+            /*top: 50%;*/
+            /*left: 50%;*/
+            /*transform: translateX(50%);*/
+            border-radius: 50%;
+            margin: auto;
+            border: solid 5px #F4D03F;
+        }
+
+        .logo-link {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .card-content {
+            padding: 0 !important;
+        }
+
+        .card-title {
+            background-color: #FBD8B0;
+            padding: 12px;
+        }
+
+        p {
+            line-height: 150%;
+        }
+
+        li {
+            padding-bottom: 10px;
+        }
+
+        strong {
+            font-weight: bolder;
+        }
+
+        .project-item {
+        }
+
+        .project-logo {
+        }
+
+        .authors {
+            text-align: center;
+            width: 100%;
+            margin: auto;
+            font-size: 12pt;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .author {
+            font-weight: bold;
+            display: inline;
+            padding: 0 1em;
+        }
+
+        h3 {
+            font-size: xx-large;
+            display: block;
+            /*font-size: 1.5em;*/
+            margin-block-start: 0.83em;
+            margin-block-end: 0.83em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+        }
+
+        .bibtex {
+            padding-left: 20px;
+            font-family: Courier New, Courier, 'gandhi_sansregular', monospace;
+            white-space: pre;
+        }
+
+        ul.marked {
+            list-style-type: circle !important;
+        }
+
+        ul li::marker {
+            color: darkslategrey;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="">
+        <div style="">
+            <div class="container">
+                <div class="">
+                    <div class="row">
+                        <div class="col s12 m12 l10 offset-l1">
+                            <div class="title">
+                                <h2 class="center" style="margin-top: 120px; font-size: 32pt">
+                                    Text-Audio-Visual-conditioned Diffusion Model for Video Saliency Prediction
+                                </h2>
+                                <!-- <p class="center" style="font-size: large"><a href="https://arxiv.org/abs/2002.03711">[ arxiv.org/abs/2002.03711 ]</a> -->
+                                <p class="center" style="font-size: large"><i>Under Review</i>
+                                <p class="center" style="font-size: large">
+                                    <a href="https://arxiv.org/abs/2504.14267">[ Paper ]</a>&nbsp<a href="https://github.com/Vencoders/FANeRV">[ Code ]</a>&nbsp<a href="https://arxiv.org/abs/2504.14267">[ PDF ]</a>
+                                    <!--                 <p class="center" style="font-size: large"><a href="https://github.com/Vencoders/PU-AT">[ Code ]</a> -->
+                            </div>
+                            <div class="authors">
+                                <!-- 			  <div class="author"><a href="https://huzi96.github.io/">Yueyu Hu</a></div><br class="hide-on-med-and-up"> -->
+                                <div class="author">Li Yu {li.yu@nuist.edu.cn}</a></div><br class="hide-on-med-and-up">
+                                <div class="author">Xuanzhe Sun {20221249031@nuist.edu.cn}</a></div><br class="hide-on-med-and-up">
+                                <div class="author">Wei Zhou {}</a></div><br class="hide-on-med-and-up">
+                                <div class="author">Moncef Gabbouj {mon-cef.gabbouj@tuni.fi}</a></div><br class="hide-on-med-and-up">
+                            </div>
+                            <div class="abstract">
+                                <h3 class="center">Abstract</h3>
+                                <ul style="font-size: 13pt; text-align: justify">
+                                    <li>
+                                        <div>
+                                            <i class="material-icons tiny cyan-text">grade</i>
+                                            Video saliency prediction is crucial for downstream applications, such as video compression and human-computer interaction. With the flourishing of multimodal learning, researchers increasingly explored multimodal video saliency prediction, including audio-visual and text-visual methods. Auditory cues attract the viewer's attention to sound sources, while textual cues offer semantic insights of video content which is aligned with human cognitive process. Integrating these complementary cues can improve the accuracy of saliency prediction. Therefore, we attempt to simultaneously analyze visual, auditory, and textual modalities in this paper, and propose TAVDiff, a Text-Audio-Visual-conditioned Diffusion Model for video saliency prediction. TAVDiff treats video saliency prediction as an image generation task conditioned on text, audio, and video inputs, and predicts saliency maps through stepwise denoising. To effectively utilize textual information, we employ a large multimodal model to generate textual descriptions for video frames and introduce the Saliency-Oriented Image-Text Response (SITR) mechanism. This generates image-text response maps that guide the model to focus on visual regions semantically related to the textual description. For auditory input, we use it as one of the conditional information to direct the model's attention toward salient regions indicated by sounds.  Additionally, since the diffusion transformer (DiT) typically concatenates conditional information with the timestep, potentially affecting noise estimation. We propose Saliency-DiT, which decouples conditional information from the timestep, enhancing effective conditional guidance. Experimental results show that TAVDiff outperforms existing methods, with an improvement of 1. 03%, 2. 35%, 2. 71% and 0. 33% in SIM, CC, NSS and AUC-J metrics, respectively.
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="abstract">
+                                <h3 class="center">Highlights</h3>
+                                <ul style="font-size: 13pt; text-align: justify">
+                                    <li>
+                                        <div>
+                                            <i class="material-icons tiny cyan-text">grade</i>
+                                            We propose TAVDiff, the first tri-modal saliency prediction framework based on diffusion model, which treats video saliency prediction as a text, video, and audio conditioned image generation task.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <i class="material-icons tiny  cyan-text">grade</i>
+                                            A novel semantic guidance method, SITR, is proposed to mine semantic cues from text and provide semantic guidance for saliency prediction.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <i class="material-icons tiny  cyan-text">grade</i>
+                                            A new denoising network, Saliency-DiT, which decouples visual, audio, and text conditions from timestep, is proposed to enable effective multimodal saliency prediction.
+                                        </div>
+                                    </li>
+                                 
+                                </ul>
+                            </div>
+                            <div class="experiment">
+
+                                <div class="row">
+                                    <h3 class="center">Network Architecture</h3>
+                                    <div class="col l12 m12 s12">
+                                        <img src="images/TAVDiff-model.png" class="responsive-img">
+                                    </div>
+
+                                    <div class="col l12 m12 s12">
+                                        <p style="text-align: justify"><i class="material-icons tiny cyan-text">grade</i>The overall framework of our proposed method
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <h3 class="center">Results</h3>
+                                    <!--                 <div class="col l12 m12 s12"> -->
+                                    <div class="col l10 offset-l1 m8 offset-m2 s10 offset-s1 center-align">
+                                        <img src="images/TAVDiff-Result.png" class="responsive-img">
+                                        <img src="images/TAVDiff-visualization.png" class="responsive-img">
+
+
+                                    </div>
+
+
+
+                                    <div class="row">
+                                        <div class="col l12 m12 s12">
+                                            <p><strong>Please check our paper for detail results.</strong></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <h3 class="center">Citation</h3>
+                                    <div class="col l12 m12 s12">
+                                        <p>
+
+
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
