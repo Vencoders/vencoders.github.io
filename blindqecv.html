@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- 适配手机、平板和电脑 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 浏览器标签页标题 -->
+    <title>Fine-Grained Degradation-Guided Sequential Inference for Blind QECV</title>
+
+    <meta
+        name="description"
+        content="Project page for Fine-Grained Degradation-Guided Sequential Inference for Blind QECV."
+    >
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #222;
+            background: #f5f7fa;
+            line-height: 1.7;
+        }
+
+        a {
+            color: #1267d6;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: min(1080px, 92%);
+            margin: 0 auto;
+        }
+
+        /* 顶部标题区域 */
+        .hero {
+            background: linear-gradient(135deg, #ffffff, #eef4fb);
+            padding: 65px 20px 50px;
+            text-align: center;
+            border-bottom: 1px solid #dfe5ec;
+        }
+
+        .venue {
+            display: inline-block;
+            padding: 6px 14px;
+            margin-bottom: 18px;
+            border-radius: 20px;
+            background: #e8f1ff;
+            color: #1267d6;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        h1 {
+            max-width: 1000px;
+            margin: 0 auto 18px;
+            font-size: clamp(30px, 4.5vw, 50px);
+            line-height: 1.22;
+            color: #172033;
+        }
+
+        .authors {
+            margin: 20px auto 8px;
+            font-size: 17px;
+        }
+
+        .authors span {
+            display: inline-block;
+            margin: 4px 8px;
+        }
+
+        .affiliation {
+            margin-top: 8px;
+            color: #5f6878;
+            font-size: 15px;
+        }
+
+        /* Paper、Code、PDF按钮 */
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        .button {
+            display: inline-block;
+            min-width: 105px;
+            padding: 10px 20px;
+            border-radius: 8px;
+            background: #172033;
+            color: white;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            background: #1267d6;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* 导航栏 */
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.96);
+            border-bottom: 1px solid #dde3ea;
+            text-align: center;
+            padding: 13px 10px;
+        }
+
+        .nav a {
+            display: inline-block;
+            margin: 4px 15px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* 正文卡片 */
+        section {
+            margin: 34px 0;
+            padding: 36px 42px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 18px rgba(20, 35, 55, 0.07);
+        }
+
+        h2 {
+            margin-top: 0;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #1267d6;
+            color: #172033;
+            font-size: 29px;
+        }
+
+        h3 {
+            color: #26344b;
+        }
+
+        .abstract {
+            text-align: justify;
+        }
+
+        .highlights li {
+            margin-bottom: 12px;
+        }
+
+        /* 论文图片 */
+        .paper-image {
+            display: block;
+            width: 100%;
+            max-width: 1000px;
+            height: auto;
+            margin: 24px auto 10px;
+            border: 1px solid #e0e5eb;
+            border-radius: 8px;
+        }
+
+        .caption {
+            max-width: 900px;
+            margin: 10px auto 0;
+            color: #687283;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* 结果表 */
+        .table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            margin-top: 24px;
+        }
+
+        table {
+            width: 100%;
+            min-width: 650px;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        th,
+        td {
+            padding: 12px 14px;
+            border: 1px solid #dfe5ec;
+        }
+
+        th {
+            background: #eef4fb;
+            color: #172033;
+        }
+
+        .best {
+            font-weight: bold;
+        }
+
+        /* BibTeX区域 */
+        .citation-box {
+            position: relative;
+        }
+
+        pre {
+            overflow-x: auto;
+            padding: 22px;
+            border-radius: 8px;
+            background: #172033;
+            color: #f6f8fa;
+            font-family: Consolas, Monaco, monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            white-space: pre-wrap;
+        }
+
+        .copy-button {
+            margin-top: 8px;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            background: #1267d6;
+            color: white;
+            cursor: pointer;
+        }
+
+        .copy-button:hover {
+            background: #0e54ae;
+        }
+
+        footer {
+            padding: 25px 10px 40px;
+            color: #77808e;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        @media (max-width: 700px) {
+            .hero {
+                padding: 45px 12px 35px;
+            }
+
+            section {
+                padding: 26px 20px;
+            }
+
+            .nav a {
+                margin: 4px 7px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ==================== 顶部信息 ==================== -->
+    <header class="hero">
+        <div class="container">
+
+            <!-- 年份和发表期刊/会议 -->
+            <div class="venue">
+                2026 · IEEE Transactions on Circuits and Systems for Video Technology
+            </div>
+
+            <!-- 论文标题 -->
+            <h1>
+                Blind Quality Enhancement of Compressed Video via Fine-Grained Degradation-Guided Sequential Inference
+            </h1>
+
+            <!-- ==================== 作者信息 ==================== -->
+<div class="authors">
+
+    <span class="author">
+        Li Yu<sup>1,2</sup>
+        <span class="membership">Member, IEEE</span>
+    </span>
+
+    <span class="author">
+        Yingbo Zhao<sup>1</sup>
+    </span>
+
+    <span class="author">
+        Shiyu Wu<sup>3</sup>
+    </span>
+
+    <span class="author">
+        Siyue Yu<sup>4</sup>
+        <span class="membership">Member, IEEE</span>
+    </span>
+
+    <span class="author">
+        <a href="mailto:moncef.gabbouj@tuni.fi">
+            Moncef Gabbouj<sup>5,*</sup>
+        </a>
+        <span class="membership">Fellow, IEEE</span>
+    </span>
+
+    <span class="author">
+        Qingshan Liu<sup>6</sup>
+        <span class="membership">Senior Member, IEEE</span>
+    </span>
+
+</div>
+
+<!-- ==================== 作者单位 ==================== -->
+<div class="affiliations">
+
+    <p>
+        <sup>1</sup>
+        School of Computer Science, Nanjing University of Information
+        Science &amp; Technology, Nanjing, China
+    </p>
+
+    <p>
+        <sup>2</sup>
+        Jiangsu Collaborative Innovation Center of Atmospheric Environment
+        and Equipment Technology (CICAEET), Nanjing University of Information
+        Science &amp; Technology, Nanjing, China
+    </p>
+
+    <p>
+        <sup>3</sup>
+        School of Software, Nanjing University of Information Science
+        &amp; Technology, Nanjing, China
+    </p>
+
+    <p>
+        <sup>4</sup>
+        Department of Intelligent Science, Xi’an Jiaotong-Liverpool University,
+        Suzhou, China
+    </p>
+
+    <p>
+        <sup>5</sup>
+        Department of Computing Sciences, Tampere University,
+        33100 Tampere, Finland
+    </p>
+
+    <p>
+        <sup>6</sup>
+        School of Computer Science, Nanjing University of Posts and
+        Telecommunications, Nanjing, China
+    </p>
+
+    <p class="corresponding-author">
+        <sup>*</sup>
+        Corresponding author:
+        <a href="mailto:moncef.gabbouj@tuni.fi">
+            Moncef Gabbouj
+        </a>
+    </p>
+
+</div>
+
+<!-- ==================== 基金信息 ==================== -->
+<div class="funding">
+    This work was supported in part by the National Natural Science
+    Foundation of China under Grant 62002172.
+</div>
+
+            <!-- 三个主要链接 -->
+            <div class="links">
+
+                <!-- 链接到期刊或会议论文页面 -->
+                <a
+                    class="button"
+                    href="https://doi.org/10.1109/TCSVT.2026.3707192"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Paper
+                </a>
+
+                <!-- 链接到代码仓库 -->
+                <a
+                    class="button"
+                    href="https://github.com/Vencoders/Fine-Grained-Degradation-Guided-Sequential-Inference-for-blind-QECV"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Code
+                </a>
+
+                <!-- 链接到同一目录下的PDF -->
+                <a
+                    class="button"
+                    href="./TCSVT_28956_2026.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    PDF
+                </a>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== 页面导航 ==================== -->
+    <nav class="nav">
+        <a href="#abstract">Abstract</a>
+        <a href="#highlights">Highlights</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#results">Results</a>
+        <a href="#citation">Citation</a>
+    </nav>
+
+    <main class="container">
+
+        <!-- ==================== 摘要 ==================== -->
+        <section id="abstract">
+            <h2>Abstract</h2>
+
+            <p class="abstract">
+                Existing studies on quality enhancement for compressed video (QECV) predominantly rely on known quantization parameters (QPs), training separate enhancement models for each QP setting, which are referred to as non-blind methods. However, in practical scenarios such as transcoding and transmission, QPs may be partially or entirely unavailable, which limits the applicability of these methods and motivates the development of blind QECV techniques. Existing blind methods typically generate degradation vectors using classification models trained with cross-entropy loss, and employ them as channel attention to guide artifact reduction. Nevertheless, such degradation representations mainly capture global compression information and lack fine-grained spatial cues, making them less effective in handling spatially varying artifact patterns. To address this issue, we propose a pre-trained degradation representation learning module that decouples and extracts high-dimensional, multi-scale degradation representations from compressed video content, providing fine-grained guidance for artifact reduction. Furthermore, most existing blind and non-blind methods adopt a uniform inference architecture for all compression levels, ignoring the distinct computational demands of different QPs. To overcome this limitation, we introduce a sequential inference strategy that adaptively adjusts the number of artifact reduction stages according to the estimated compression level. Extensive experiments show that the proposed method significantly improves enhancement performance. In particular, at QP = 22, it raises PSNR improvement from 0.31 dB to 0.65 dB over the previous state-of-the-art blind method. Meanwhile, with the proposed sequential inference strategy, the average inference time at QP = 22 is reduced by 50% compared with that at QP = 42.
+            </p>
+        </section>
+
+        <!-- ==================== 贡献点 ==================== -->
+        <section id="highlights">
+            <h2>Highlights</h2>
+
+            <ul class="highlights">
+                <li>
+                    A Fine-Grained Degradation-Guided Sequential Inference method for blind QECV is proposed, which dynamically adjusts the artifact reduction stages based on the severity of compression to balance performance and efficiency.
+                </li>
+
+                <li>
+                    A Degradation Representation Learning module is proposed to evaluate the severity of compression, which combines contrastive learning and classification to effectively reduce content–degradation correlation and improve degradation discriminability.
+                </li>
+
+                <li>
+                    For each artifact reduction stage, it first aggregates spatiotemporal features with fine-grained degradation representations from DRL module for degradation-guided feature modulation; and then performs dual-branch fusion integrating global context with local detail to further exploit spatiotemporal dependencies.
+                </li>
+
+                <li>
+                    Our method achieves a PSNR improvement of 0.65 dB at QP = 22, outperforming the previous SOTA blind method by 0.34 dB, and reduces inference time by \textbf{50\%} compared to QP = 42.
+                </li>
+            </ul>
+        </section>
+
+        <!-- ==================== 网络框架 ==================== -->
+        <section id="architecture">
+            <h2>Network Architecture</h2>
+
+            <p>
+                The overall framework of the proposed method is shown below.
+                Please replace the following image with the final architecture
+                figure from your paper.
+            </p>
+
+            <img
+                class="paper-image"
+                src="./images/blind_qecv/overview.png"
+                alt="Network architecture of the proposed QECV method"
+            >
+
+            <p class="caption">
+                Overall architecture of the proposed fine-grained
+                degradation-guided sequential inference framework.
+            </p>
+        </section>
+
+        <!-- ==================== 实验结果 ==================== -->
+<section id="results">
+    <h2>Results</h2>
+
+    <h3>Quantitative Comparison</h3>
+
+    <img
+        class="paper-image"
+        src="./images/blind_qecv/quantitative-results.png"
+        alt="Quantitative comparison results"
+    >
+
+    <p class="caption">
+        Quantitative comparison with representative competing methods.
+    </p>
+
+    <h3>Visual Comparison</h3>
+
+    <img
+        class="paper-image"
+        src="./images/blind_qecv/visual-results.png"
+        alt="Visual comparison results"
+    >
+
+    <p class="caption">
+        Visual quality comparison on representative test sequences.
+    </p>
+
+    
+</section>
+      
+        <!-- ==================== 引用 ==================== -->
+        <section id="citation">
+    <h2>Citation</h2>
+
+    <p>
+        If you find this work useful, please cite our paper:
+    </p>
+
+    <div class="citation-box">
+        <pre id="bibtex">@article{yu2026blind,
+  title   = {Blind Quality Enhancement of Compressed Video via Fine-Grained Degradation-Guided Sequential Inference},
+  author  = {Yu, Li and Zhao, Yingbo and Wu, Shiyu and Yu, Siyue and Gabbouj, Moncef and Liu, Qingshan},
+  journal = {IEEE Transactions on Circuits and Systems for Video Technology},
+  year    = {2026},
+  pages   = {1--1},
+  month   = {June},
+  doi     = {10.1109/TCSVT.2026.3707192}
+}</pre>
+
+        <button class="copy-button" onclick="copyBibtex()">
+            Copy BibTeX
+        </button>
+    </div>
+</section>
+
+    </main>
+
+    <footer>
+        © 2026 Vencoders · Academic project page
+    </footer>
+
+    <script>
+        function copyBibtex() {
+            const bibtex = document.getElementById("bibtex").innerText;
+
+            navigator.clipboard.writeText(bibtex)
+                .then(function () {
+                    alert("BibTeX copied successfully.");
+                })
+                .catch(function () {
+                    alert("Copy failed. Please select and copy the BibTeX manually.");
+                });
+        }
+    </script>
+
+</body>
+</html>
