@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+  <title>FOSal: Audio-Visual Saliency Prediction</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection">
+  <link type="text/css" rel="stylesheet" href="css/main.css">
+  <style>
+    body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    .authors { text-align: center; width: 100%; margin: auto; font-size: 12pt; padding: 20px 0; }
+    .author { font-weight: bold; display: inline; padding: 0 1em; }
+    h3 { font-size: xx-large; font-weight: bold; }
+    p, li { line-height: 150%; }
+    li { padding-bottom: 10px; }
+    .bibtex { padding-left: 20px; font-family: "Courier New", Courier, monospace; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m12 l10 offset-l1">
+        <div class="title">
+          <h2 class="center" style="margin-top: 90px; font-size: 32pt">FOSal: Fine-grained Semantic Auditory Guidance and Omni-scale Visual Perception for Audio-Visual Saliency Prediction</h2>
+          <p class="center" style="font-size: large"><i>IEEE Transactions on Multimedia (TMM), accepted, 2026</i></p>
+          <p class="center" style="font-size: large">
+            <a href="papers/FOSal.pdf">[ Paper ]</a>&nbsp;
+            <a href="https://github.com/Vencoders/FOSal">[ Code ]</a>&nbsp;
+            <a href="papers/FOSal.pdf">[ PDF ]</a>
+          </p>
+        </div>
+        <div class="authors">
+          <span class="author">Li Yu</span>
+          <span class="author">Wanting He</span>
+          <span class="author">Jimin Xiao</span>
+          <span class="author">Huihui Bai</span>
+        </div>
+
+        <section>
+          <h3 class="center">Abstract</h3>
+          <ul style="font-size: 13pt; text-align: justify"><li><i class="material-icons tiny cyan-text">grade</i>
+            Audio-Visual saliency prediction (AVSP) aims to localize salient regions that attract human gaze in videos. Existing approaches commonly treat audio as a holistic signal, so mixed background noise can misguide visual attention; visual representations with fixed receptive fields also struggle to jointly capture local fleeting motion and global scene context. We propose FOSal, a Fine-grained Semantic Auditory Guidance and Omni-scale Visual Perception framework. FOSal decouples audio into latent semantic units and actively filters unreliable cues, establishes four parallel visual receptive fields from point-level to global context, and dynamically aggregates multi-scale features under semantic audio guidance. Extensive experiments on six datasets show generally superior performance across most metrics, with an average improvement of 3.4% over previous state-of-the-art results.
+          </li></ul>
+        </section>
+
+        <section>
+          <h3 class="center">Highlights</h3>
+          <ul style="font-size: 13pt; text-align: justify">
+            <li><i class="material-icons tiny cyan-text">grade</i>FSAGF follows a decomposition-quantization-gating paradigm to retain only reliable, attention-evoking semantic audio cues and suppress environmental noise.</li>
+            <li><i class="material-icons tiny cyan-text">grade</i>HO-VPM splits channels into four parallel branches, enabling point-to-global omni-scale spatiotemporal visual perception within a single module.</li>
+            <li><i class="material-icons tiny cyan-text">grade</i>AVDA preserves temporal information while adaptively calibrating cross-scale fusion weights for each frame.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3 class="center">Network Architecture</h3>
+          <img src="images/FOSal-framework.png" class="responsive-img" alt="FOSal network architecture">
+          <p style="text-align: justify"><i class="material-icons tiny cyan-text">grade</i>FOSal combines Hierarchical Omni-scale Visual Perception (HO-VPM), Fine-grained Semantic Auditory-guided Fusion (FSAGF), and Audio-Modulated Visual Dynamic Aggregation (AVDA).</p>
+        </section>
+
+        <section>
+          <h3 class="center">Results</h3>
+          <img src="images/FOSal-results.png" class="responsive-img" alt="Quantitative comparison on six datasets">
+          <img src="images/FOSal-visualization.png" class="responsive-img" alt="Micro-Gate qualitative visualization">
+          <p><strong>Please check the paper for complete experimental settings and results.</strong></p>
+        </section>
+
+        <section>
+          <h3 class="center">Citation</h3>
+          <div class="bibtex">@article{yu2026fosal,
+  title={FOSal: Fine-grained Semantic Auditory Guidance and Omni-scale Visual Perception for Audio-Visual Saliency Prediction},
+  author={Yu, Li and He, Wanting and Xiao, Jimin and Bai, Huihui},
+  journal={IEEE Transactions on Multimedia},
+  year={2026},
+  note={Accepted}
+}</div>
+          <p style="text-align: justify">The Paper link currently points to the accepted manuscript; it will be replaced with the official IEEE page after online publication.</p>
+        </section>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
