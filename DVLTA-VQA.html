@@ -1,34 +1,529 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WCSAM-Net</title>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="DVLTA-VQA: Decoupled Vision-Language Modeling With Text-Guided Adaptation for Blind Video Quality Assessment">
+
+    <meta name="keywords"
+          content="DVLTA-VQA, Video Quality Assessment, NR-VQA, CLIP, Vision-Language Model">
+
+    <meta name="author"
+          content="Li Yu, Situo Wang, Wei Zhou, Moncef Gabbouj">
+
+    <link rel="canonical"
+          href="https://vencoders.github.io/DVLTA-VQA.html">
+
+    <!-- 保留原网站图标。如果没有该图片，可以删除这一行 -->
+    <link rel="icon"
+          type="image/x-icon"
+          href="images/YH.png">
+
+    <title>DVLTA-VQA</title>
+
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+
+    <!-- Materialize CSS -->
+    <link type="text/css"
+          rel="stylesheet"
+          href="css/materialize.min.css"
+          media="screen,projection">
+
+    <!-- 自定义 CSS -->
+    <link type="text/css"
+          rel="stylesheet"
+          href="css/main.css">
+
+    <!-- jQuery 与 Materialize JS -->
+    <script type="text/javascript"
+            src="js/jquery-3.0.0.min.js"></script>
+
+    <script type="text/javascript"
+            src="js/materialize.min.js"></script>
+
+    <script type="text/javascript"
+            src="js/main.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: #333333;
+            background-color: #ffffff;
+        }
+
+        .main-container {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+
+        .paper-title {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 32pt;
+            line-height: 1.25;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .publication {
+            margin-top: 10px;
+            margin-bottom: 12px;
+            font-size: 15pt;
+            text-align: center;
+        }
+
+        .paper-links {
+            margin-top: 10px;
+            margin-bottom: 25px;
+            font-size: 14pt;
+            text-align: center;
+        }
+
+        .paper-links a {
+            margin: 0 8px;
+            color: #00838f;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .paper-links a:hover {
+            text-decoration: underline;
+        }
+
+        .authors {
+            width: 100%;
+            margin: 0 auto 50px auto;
+            padding-top: 10px;
+            text-align: center;
+            font-size: 13pt;
+            line-height: 2;
+        }
+
+        .author {
+            display: inline-block;
+            padding: 0 1em;
+            font-weight: bold;
+        }
+
+        .section-block {
+            margin-top: 45px;
+            margin-bottom: 45px;
+        }
+
+        h3.section-title {
+            margin-top: 0;
+            margin-bottom: 25px;
+            font-size: 27px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .content-list {
+            margin: 0;
+            padding-left: 24px;
+            font-size: 13pt;
+            text-align: justify;
+        }
+
+        .content-list li {
+            margin-bottom: 18px;
+            padding-left: 5px;
+            line-height: 1.75;
+        }
+
+        .content-list li::marker {
+            color: darkslategrey;
+            font-size: 1.2em;
+        }
+
+        .highlight-title {
+            font-weight: bold;
+        }
+
+        .material-icons.tiny {
+            margin-right: 6px;
+            vertical-align: -2px;
+        }
+
+        .bibtex {
+            margin-top: 10px;
+            padding: 22px;
+            border: 1px solid #dddddd;
+            border-radius: 6px;
+            background-color: #f7f7f7;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 11pt;
+            line-height: 1.55;
+            white-space: pre-wrap;
+            overflow-wrap: anywhere;
+            overflow-x: auto;
+        }
+
+        .footer {
+            margin-top: 60px;
+            padding-top: 25px;
+            border-top: 1px solid #e0e0e0;
+            color: #777777;
+            font-size: 10.5pt;
+            text-align: center;
+        }
+
+        @media only screen and (max-width: 992px) {
+            .main-container {
+                padding-top: 45px;
+                padding-bottom: 50px;
+            }
+
+            .paper-title {
+                margin-top: 25px;
+                font-size: 25pt;
+            }
+
+            .publication {
+                font-size: 13pt;
+            }
+
+            .authors {
+                font-size: 12pt;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            .main-container {
+                padding-top: 25px;
+                padding-bottom: 35px;
+            }
+
+            .paper-title {
+                margin-top: 20px;
+                font-size: 21pt;
+                line-height: 1.3;
+            }
+
+            .publication {
+                font-size: 12pt;
+                line-height: 1.5;
+            }
+
+            .paper-links {
+                font-size: 12pt;
+            }
+
+            .author {
+                display: block;
+                padding: 2px 0;
+            }
+
+            .authors {
+                margin-bottom: 35px;
+            }
+
+            h3.section-title {
+                font-size: 23px;
+            }
+
+            .content-list {
+                padding-left: 18px;
+                font-size: 11.5pt;
+            }
+
+            .bibtex {
+                padding: 15px;
+                font-size: 9.5pt;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <h1>WCSAM-Net</h1>
 
-    <p>
-        Wavelet-guided Cross-Scale Attention Modulation Network
-        for Hyperspectral Image Denoising
-    </p>
+<div class="main-container">
 
-    <p>
-        <a href="./paper.pdf" target="_blank">PDF</a> |
-        <a href="./slides.pptx">PPT</a> |
-        <a href="https://github.com/Vencoders/WCSAM-Net"
-           target="_blank">Code</a>
-    </p>
+    <div class="container">
 
-    <img src="./overview.png"
-         alt="WCSAM-Net framework"
-         style="max-width: 900px; width: 100%;">
+        <div class="row">
 
-    <h2>Abstract</h2>
+            <div class="col s12 m12 l10 offset-l1">
 
-    <p>
-        在这里填写论文摘要、方法介绍、实验结果和引用信息。
-    </p>
+                <!-- ==================== Title ==================== -->
+
+                <div class="title">
+
+                    <h1 class="paper-title">
+                        DVLTA-VQA: Decoupled Vision-Language Modeling With
+                        Text-Guided Adaptation for Blind Video Quality Assessment
+                    </h1>
+
+                    <p class="publication">
+                        <i>
+                            IEEE Transactions on Circuits and Systems for
+                            Video Technology, 2026
+                        </i>
+                    </p>
+
+                    <p class="paper-links">
+
+                        <a href="https://vencoders.github.io/papers/DVLTA-VQA.pdf"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            [ Paper ]
+                        </a>
+
+                        <a href="https://github.com/Vencoders/DVLTA-VQA"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            [ Code ]
+                        </a>
+
+                    </p>
+
+                </div>
+
+
+                <!-- ==================== Authors ==================== -->
+
+                <div class="authors">
+
+                    <div class="author">Li Yu</div>
+
+                    <div class="author">Situo Wang</div>
+
+                    <div class="author">Wei Zhou</div>
+
+                    <div class="author">Moncef Gabbouj</div>
+
+                </div>
+
+
+                <!-- ==================== Abstract ==================== -->
+
+                <section class="section-block"
+                         id="abstract">
+
+                    <h3 class="section-title">Abstract</h3>
+
+                    <ul class="content-list">
+
+                        <li>
+                            <div>
+
+                                <i class="material-icons tiny cyan-text">
+                                    grade
+                                </i>
+
+                                Inspired by the dual-stream (dorsal and ventral
+                                streams) theory of the human visual system (HVS),
+                                recent Video Quality Assessment (VQA) methods have
+                                integrated Contrastive Language-Image Pretraining
+                                (CLIP) to enhance semantic understanding. However,
+                                as CLIP is originally designed for images, it lacks
+                                the ability to adequately capture the temporal
+                                dynamics and motion perception (dorsal stream)
+                                inherent in videos. To address this limitation, we
+                                propose DVLTA-VQA (Decoupled Vision-Language
+                                Modeling with Text-Guided Adaptation), which
+                                decouples CLIP’s visual and textual components to
+                                better align with the NR-VQA pipeline. Specifically,
+                                we introduce a Video-Based Temporal CLIP module and
+                                a Temporal Context Module to explicitly model motion
+                                dynamics, effectively enhancing the dorsal stream
+                                representation. Complementing this, a Basic Visual
+                                Feature Extraction Module is employed to strengthen
+                                spatial detail analysis in the ventral stream.
+                                Furthermore, we propose a text-guided adaptive fusion
+                                strategy that leverages textual semantics to
+                                dynamically weight visual features, facilitating
+                                effective spatiotemporal integration. Extensive
+                                experiments on multiple public datasets demonstrate
+                                that the proposed method achieves state-of-the-art
+                                performance, significantly improving prediction
+                                accuracy and generalization capability.
+
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </section>
+
+
+                <!-- ==================== Highlights ==================== -->
+
+                <section class="section-block"
+                         id="highlights">
+
+                    <h3 class="section-title">Highlights</h3>
+
+                    <ul class="content-list">
+
+                        <li>
+                            <div>
+
+                                <i class="material-icons tiny cyan-text">
+                                    grade
+                                </i>
+
+                                <span class="highlight-title">
+                                    Decoupled CLIP-Based Framework:
+                                </span>
+
+                                Inspired by the dual-stream theory, this paper
+                                proposes to decouple CLIP-visual and CLIP-textual
+                                to fit them into different stages of NR-VQA
+                                pipeline. The CLIP-Visual is used to extract
+                                high-level semantic features, while CLIP-Textual
+                                is used for dynamic and contextual guidance for
+                                feature fusion.
+
+                            </div>
+                        </li>
+
+                        <li>
+                            <div>
+
+                                <i class="material-icons tiny cyan-text">
+                                    grade
+                                </i>
+
+                                <span class="highlight-title">
+                                    Video-Based Temporal CLIP and Temporal Context
+                                    Module:
+                                </span>
+
+                                To enhance motion perception in the dorsal stream,
+                                this paper proposes the Video-Based Temporal CLIP,
+                                extending the image-oriented CLIP framework with
+                                temporal modeling capability. Additionally, the
+                                Temporal Context Module further refines fine-grained
+                                inter-frame contextual representations, enabling a
+                                more detailed and accurate exploration of motion
+                                dynamics. These two modules work synergistically to
+                                enhance motion perception for video quality
+                                assessment.
+
+                            </div>
+                        </li>
+
+                        <li>
+                            <div>
+
+                                <i class="material-icons tiny cyan-text">
+                                    grade
+                                </i>
+
+                                <span class="highlight-title">
+                                    Text-Guided Adaptive Fusion Strategy:
+                                </span>
+
+                                By dynamically adjusting weights of features based
+                                on textual semantic information, the proposed
+                                text-guided adaptive fusion strategy derives more
+                                precise and effective fusion results.
+
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </section>
+
+
+                <!--
+                ==================== Network Architecture ====================
+
+                当前暂时不放图片，因此本部分先注释。
+                后续准备好框架图后，可以取消注释并修改图片路径。
+
+                <section class="section-block" id="architecture">
+
+                    <h3 class="section-title">
+                        Network Architecture
+                    </h3>
+
+                    <div class="center-align">
+
+                        <img src="images/DVLTA-framework.png"
+                             class="responsive-img"
+                             alt="The overall architecture of DVLTA-VQA">
+
+                    </div>
+
+                </section>
+                -->
+
+
+                <!--
+                ==================== Results ====================
+
+                当前暂时不放图片，因此本部分先注释。
+                后续准备好结果图后，可以取消注释并修改图片路径。
+
+                <section class="section-block" id="results">
+
+                    <h3 class="section-title">
+                        Results
+                    </h3>
+
+                    <div class="center-align">
+
+                        <img src="images/DVLTA-results.png"
+                             class="responsive-img"
+                             alt="Experimental results of DVLTA-VQA">
+
+                    </div>
+
+                </section>
+                -->
+
+
+                <!-- ==================== Citation ==================== -->
+
+                <section class="section-block"
+                         id="citation">
+
+                    <h3 class="section-title">Citation</h3>
+
+                    <div class="bibtex">@article{yu2026dvlta,
+  title={DVLTA-VQA: Decoupled Vision-Language Modeling With Text-Guided Adaptation for Blind Video Quality Assessment},
+  author={Yu, Li and Wang, Situo and Zhou, Wei and Gabbouj, Moncef},
+  journal={IEEE Transactions on Circuits and Systems for Video Technology},
+  volume={36},
+  number={5},
+  pages={6826--6837},
+  year={2026},
+  doi={10.1109/TCSVT.2026.3657415}
+}</div>
+
+                </section>
+
+
+                <!-- ==================== Footer ==================== -->
+
+                <footer class="footer">
+
+                    <p>
+                        DVLTA-VQA Project Page
+                    </p>
+
+                </footer>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
 </body>
+
 </html>
