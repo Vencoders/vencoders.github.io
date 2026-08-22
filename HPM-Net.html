@@ -1,1 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="HPM-Net: Blind Image Quality Assessment via a Hierarchical Perceptual Modulation Network">
+
+    <meta name="keywords"
+          content="HPM-Net, Blind Image Quality Assessment, BIQA, Image Quality Assessment, High-Frequency, Hierarchical Perceptual Modulation">
+
+    <meta name="author"
+          content="Li Yu, Yifan Bao, Junyang Li, Wei Zhou, Zhaoqing Pan, Moncef Gabbouj">
+
+    <link rel="canonical"
+          href="https://vencoders.github.io/HPM-Net.html">
+
+    <!-- 保留原网站图标。如果没有该图片，可以删除这一行 -->
+    <link rel="icon"
+          type="image/x-icon"
+          href="images/YH.png">
+
+    <title>HPM-Net</title>
+
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+
+    <!-- Materialize CSS -->
+    <link type="text/css"
+          rel="stylesheet"
+          href="css/materialize.min.css"
+          media="screen,projection">
+
+    <!-- 自定义 CSS -->
+    <link type="text/css"
+          rel="stylesheet"
+          href="css/main.css">
+
+    <!-- jQuery 与 Materialize JS -->
+    <script type="text/javascript"
+            src="js/jquery-3.0.0.min.js"></script>
+
+    <script type="text/javascript"
+            src="js/materialize.min.js"></script>
+
+    <script type="text/javascript"
+            src="js/main.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: #333333;
+            background-color: #ffffff;
+        }
+
+        .main-container {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+
+        .paper-title {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 32pt;
+            line-height: 1.25;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .publication {
+            margin-top: 10px;
+            margin-bottom: 12px;
+            font-size: 15pt;
+            text-align: center;
+        }
+
+        .paper-links {
+            margin-top: 10px;
+            margin-bottom: 25px;
+            font-size: 14pt;
+            text-align: center;
+        }
+
+        .paper-links a {
+            margin: 0 8px;
+            color: #00838f;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .paper-links a:hover {
+            text-decoration: underline;
+        }
+
+        .authors {
+            width: 100%;
+            margin: 0 auto 50px auto;
+            padding-top: 10px;
+            text-align: center;
+            font-size: 13pt;
+            line-height: 2;
+        }
+
+        .author {
+            display: inline-block;
+            padding: 0 1em;
+            font-weight: bold;
+        }
+
+        .section-block {
+            margin-top: 45px;
+            margin-bottom: 45px;
+        }
+
+        h3.section-title {
+            margin-top: 0;
+            margin-bottom: 25px;
+            font-size: 27px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .content-list {
+            margin: 0;
+            padding-left: 24px;
+            font-size: 13pt;
+            text-align: justify;
+        }
+
+        .content-list li {
+            margin-bottom: 18px;
+            padding-left: 5px;
+            line-height: 1.75;
+        }
+
+        .content-list li::marker {
+            color: darkslategrey;
+            font-size: 1.2em;
+        }
+
+        .highlight-title {
+            font-weight: bold;
+        }
+
+        .material-icons.tiny {
+            margin-right: 6px;
+            vertical-align: -2px;
+        }
+
+        .bibtex {
+            margin-top: 10px;
+            padding: 22px;
+            border: 1px solid #dddddd;
+            border-radius: 6px;
+            background-color: #f7f7f7;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 11pt;
+            line-height: 1.55;
+            white-space: pre-wrap;
+            overflow-wrap: anywhere;
+            overflow-x: auto;
+        }
+
+        .footer {
+            margin-top: 60px;
+            padding-top: 25px;
+            border-top: 1px solid #e0e0e0;
+            color: #777777;
+            font-size: 10.5pt;
+            text-align: center;
+        }
+
+        @media only screen and (max-width: 992px) {
+            .main-container {
+                padding-top: 45px;
+                padding-bottom: 50px;
+            }
+
+            .paper-title {
+                margin-top: 25px;
+                font-size: 25pt;
+            }
+
+            .publication {
+                font-size: 13pt;
+            }
+
+            .authors {
+                font-size: 12pt;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            .main-container {
+                padding-top: 25px;
+                padding-bottom: 35px;
+            }
+
+            .paper-title {
+                margin-top: 20px;
+                font-size: 21pt;
+                line-height: 1.3;
+            }
+
+            .publication {
+                font-size: 12pt;
+                line-height: 1.5;
+            }
+
+            .paper-links {
+                font-size: 12pt;
+            }
+
+            .author {
+                display: block;
+                padding: 2px 0;
+            }
+
+            .authors {
+                margin-bottom: 35px;
+            }
+
+            h3.section-title {
+                font-size: 23px;
+            }
+
+            .content-list {
+                padding-left: 18px;
+                font-size: 11.5pt;
+            }
+
+            .bibtex {
+                padding: 15px;
+                font-size: 9.5pt;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="main-container">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col s12 m12 l10 offset-l1">
+
+                <!-- ==================== Title ==================== -->
+
+                <div class="title">
+
+                    <h1 class="paper-title">
+                        Blind Image Quality Assessment via a Hierarchical Perceptual Modulation Network
+                    </h1>
+
+                    <p class="publication">
+                        <i>
+                            ACM Transactions on Multimedia Computing, Communications, and Applications (TOMM), 2026
+                        </i>
+                    </p>
+
+                    <p class="paper-links">
+
+                        <a href="https://dl.acm.org/doi/10.1145/3840393"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            [ Paper ]
+                        </a>
+
+
+                        <a href="https://dl.acm.org/doi/10.1145/3840393"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            [ PDF ]
+                        </a>
+
+                    </p>
+
+                </div>
+
+
+                <!-- ==================== Authors ==================== -->
+
+                <div class="authors">
+
+                    <div class="author">Li Yu</div>
+
+                    <div class="author">Yifan Bao</div>
+
+                    <div class="author">Junyang Li</div>
+
+                    <div class="author">Wei Zhou</div>
+                
+                    <div class="author">Zhaoqing Pan</div>
+                
+                    <div class="author">Moncef Gabbouj<sup>*</sup></div>
+                  
+                    <div style="font-size: 11pt; font-weight: normal;">
+                      * Corresponding author
+
+                </div>
+
+
+                <!-- ==================== Abstract ==================== -->
+
+                <section class="section-block"
+                         id="abstract">
+
+                    <h3 class="section-title">Abstract</h3>
+
+                    <ul class="content-list">
+
+                        <li>
+                            <div>
+
+                                <i class="material-icons tiny cyan-text">
+                                    grade
+                                </i>
+
+                                Blind image quality assessment (BIQA) is crucial for perceptual optimization in image processing. To better align objective quality predictions with human perception, researchers have designed BIQA models inspired by the frequency-sensitive characteristics of the human visual system (HVS). However, existing methods usually treat high-frequency (HF) cues as features for direct quality score regression, rather than exploiting them as perceptual modulation signals. In HVS, HF cues play a dynamic role in perceptual modulation, guiding the processing and integration of information across hierarchical stages. Inspired by this, we propose a hierarchical perceptual modulation network (HPM-Net) for BIQA. In the proposed network, we utilize an octave convolution-based high-frequency module (OCHFM) to extract HF cues and then hierarchically modulate them into the quality estimation module through hierarchical feature fusion (HFF). In addition, a contrastive learning-based distortion module (CLDM) is integrated with the modulated features through an attentional feature fusion mechanism. Extensive experiments on five benchmarks show that HPM-Net achieves leading or competitive performance compared to state-of-the-art methods in the majority of datasets with both synthetic and authentic distortions.
+
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </section>
+
+
+                <!-- ==================== Highlights ==================== -->
+
+                <section class="section-block"
+                         id="highlights">
+
+                    <h3 class="section-title">Highlights</h3>
+
+                    <ul class="content-list">
+
+                        <li>
+                            <div>
+
+                                <i class="material-icons tiny cyan-text">
+                                    grade
+                                </i>
+
+
+                                </span>
+
+                                We propose a novel perspective in utilizing HF cues for BIQA: from using it for direct quality regression to employing it as a perceptual modulation signal. Unlike methods that map handcrafted HF metrics directly to scores, our method leverages HF cues to guide and reweight the hierarchical processing of spatial features, following a perceptually motivated design.
+
+                            </div>
+                        </li>
+
+                        <li>
+                            <div>
+
+                                <i class="material-icons tiny cyan-text">
+                                    grade
+                                </i>
+
+                                
+                                </span>
+
+                                We realize this paradigm via HPM-Net, which includes an OCHFM for HF feature extraction, a CLDM for distortion-aware representation learning, and the HFF for attention-guided integration.
+
+                            </div>
+                        </li>
+
+                        <li>
+                            <div>
+
+                                <i class="material-icons tiny cyan-text">
+                                    grade
+                                </i>
+
+                                
+                                </span>
+
+                                Extensive experiments on five databases demonstrate that HPM-Net achieves leading or competitive performance across synthetic and authentic distortion datasets. 
+
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </section>
+
+
+                <!-- ==================== Network Architecture ==================== -->
+
+<section class="section-block" id="architecture">
+
+    <h3 class="section-title">
+        Network Architecture
+    </h3>
+
+    <div class="center-align">
+
+        <img src="images/DVLTA-framework.png"
+             class="responsive-img"
+             alt="The overall architecture of HPM-Net">
+
+    </div>
+
+</section>
+
+
+<!-- ==================== Results ==================== -->
+
+<section class="section-block" id="results">
+
+    <h3 class="section-title">
+        Results
+    </h3>
+
+    <div class="center-align">
+
+        <img src="images/DVLTA-results.png"
+             class="responsive-img"
+             alt="Experimental results of DVLTA-VQA">
+
+    </div>
+
+    
+</section>
+<!-- ==================== Visualization ==================== -->
+
+<section class="section-block" id="visualization">
+
+    <h3 class="section-title">
+        Visualization
+    </h3>
+
+    <div class="center-align">
+
+        <img src="images/DVLTA-visualization.png"
+             class="responsive-img"
+             alt="Visualization results of DVLTA-VQA">
+
+    </div>
+
+</section>
+
+
+                <!-- ==================== Citation ==================== -->
+
+                <section class="section-block"
+                         id="citation">
+
+                    <h3 class="section-title">Citation</h3>
+
+                    <div class="bibtex">@article{yu2026hpmnet,
+  title={Blind Image Quality Assessment via a Hierarchical Perceptual Modulation Network},
+  author={Yu, Li and Bao, Yifan and Li, Junyang and Zhou, Wei and Pan, Zhaoqing and Gabbouj, Moncef},
+  journal={ACM Transactions on Multimedia Computing, Communications, and Applications},
+  year={2026},
+  doi={10.1145/3840393}
+}</div>
+
+                </section>
+
+
+                <!-- ==================== Footer ==================== -->
+
+                <footer class="footer">
+
+                    <p>
+                        HPM-Net Project Page
+                    </p>
+
+                </footer>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
