@@ -416,6 +416,15 @@
 
     </div>
 
+    <p style="margin-top: 15px; text-align: justify;">
+        This image presents the overall HPM-Net architecture. A distorted image is processed along three coordinated paths. 
+        The upper OCHFM path decomposes features into high- and low-frequency components and provides high-frequency cues at multiple levels. 
+        The central quality estimation module uses a VAN backbone; at successive stages, HFF blocks align the high-frequency cues with the current image representation and perform context-aware modulation. 
+        In parallel, CLDM uses a ResNet-50 branch and contrastive learning to obtain distortion-aware features. 
+        Before score regression, AFF combines the modulated quality representation with the CLDM representation, and an MLP predicts the final quality score. 
+        The overall flow is high-frequency cue extraction, stage-wise modulation, distortion-aware fusion, and perceptual quality prediction.
+    </p>
+
 </section>
 
 
@@ -435,8 +444,13 @@
 
     </div>
 
-    
+    <p style="margin-top: 15px; text-align: justify;">
+        HPM-Net ranks first on TID2013 (PLCC 0.916 / SRCC 0.897) and remains leading or competitive on both synthetic and authentic distortions.
+    </p>
+
 </section>
+
+
 <!-- ==================== Visualization ==================== -->
 
 <section class="section-block" id="visualization">
@@ -452,6 +466,11 @@
              alt="Visualization results of HPM-Net">
 
     </div>
+
+    <p style="margin-top: 15px; text-align: justify;">
+        gMAD provides a qualitative stress test between two quality models. 
+        These examples suggest that HPM-Net distinguishes perceptually meaningful quality changes that VCRNet may assign similar scores to, especially at both high- and low-quality levels.
+    </p>
 
 </section>
 
